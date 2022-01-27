@@ -15,13 +15,13 @@ import org.bukkit.inventory.ItemStack;
 @UtilityClass
 public final class Dies {
 
-    public static final String DIE_DESC = "A die to create a cast from";
+    public static final String DIE_DESC = "用于制作模具";
     public static final SlimefunItemStack DIE_SHOVEL_HEAD =
         ThemeUtils.themedItemStack(
             "DIE_SHOVEL_HEAD",
             SkullTextures.PART_SHOVEL_HEAD,
             ThemeItemType.CAST,
-            "Die: Stone Shovel Head",
+            "模具原型: 石制铲子头",
             ThemeUtils.PASSIVE + DIE_DESC
         );
     public static final SlimefunItemStack DIE_PICKAXE_HEAD =
@@ -29,7 +29,7 @@ public final class Dies {
             "DIE_PICKAXE_HEAD",
             SkullTextures.PART_PICKAXE_HEAD,
             ThemeItemType.CAST,
-            "Die: Stone Pickaxe Head",
+            "模具原型: 石制镐子头",
             ThemeUtils.PASSIVE + DIE_DESC
         );
     public static final SlimefunItemStack DIE_AXE_HEAD =
@@ -37,7 +37,7 @@ public final class Dies {
             "DIE_AXE_HEAD",
             SkullTextures.PART_AXE_HEAD,
             ThemeItemType.CAST,
-            "Die: Stone Axe Head",
+            "模具原型: 石制斧头",
             ThemeUtils.PASSIVE + DIE_DESC
         );
     public static final SlimefunItemStack DIE_HOE_HEAD =
@@ -45,7 +45,7 @@ public final class Dies {
             "DIE_HOE_HEAD",
             SkullTextures.PART_HOE_HEAD,
             ThemeItemType.CAST,
-            "Die: Stone Hoe Head",
+            "模具原型: 石制锄头",
             ThemeUtils.PASSIVE + DIE_DESC
         );
     public static final SlimefunItemStack DIE_SWORD_BLADE =
@@ -53,7 +53,7 @@ public final class Dies {
             "DIE_SWORD_BLADE",
             SkullTextures.PART_SWORD_BLADE,
             ThemeItemType.CAST,
-            "Die: Stone Sword Head",
+            "模具原型: 石制剑身",
             ThemeUtils.PASSIVE + DIE_DESC
         );
     public static final SlimefunItemStack DIE_TOOL_ROD =
@@ -61,7 +61,7 @@ public final class Dies {
             "DIE_TOOL_ROD",
             SkullTextures.PART_TOOL_ROD,
             ThemeItemType.CAST,
-            "Die: Tool Rod",
+            "模具原型: 手柄",
             ThemeUtils.PASSIVE + DIE_DESC
         );
     public static final SlimefunItemStack DIE_HELM_PLATE =
@@ -69,7 +69,7 @@ public final class Dies {
             "DIE_HELM_PLATE",
             SkullTextures.PART_HELM_PLATES,
             ThemeItemType.CAST,
-            "Die: Stone Helmet Plates",
+            "模具原型: 石制头盔板",
             ThemeUtils.PASSIVE + DIE_DESC
         );
     public static final SlimefunItemStack DIE_CHEST_PLATE =
@@ -77,7 +77,7 @@ public final class Dies {
             "DIE_CHEST_PLATE",
             SkullTextures.PART_CHEST_PLATES,
             ThemeItemType.CAST,
-            "Die: Stone Chest Plates",
+            "模具原型: 石制胸甲板",
             ThemeUtils.PASSIVE + DIE_DESC
         );
     public static final SlimefunItemStack DIE_LEG_PLATE =
@@ -85,7 +85,7 @@ public final class Dies {
             "DIE_LEG_PLATE",
             SkullTextures.PART_LEG_PLATES,
             ThemeItemType.CAST,
-            "Die: Stone Leg Plates",
+            "模具原型: 石制护腿板",
             ThemeUtils.PASSIVE + DIE_DESC
         );
     public static final SlimefunItemStack DIE_BOOT_PLATE =
@@ -93,7 +93,7 @@ public final class Dies {
             "DIE_BOOT_PLATE",
             SkullTextures.PART_BOOTS_PLATES,
             ThemeItemType.CAST,
-            "Die: Stone Boot Plates",
+            "模具原型: 石制靴子板",
             ThemeUtils.PASSIVE + DIE_DESC
         );
     public static final SlimefunItemStack DIE_MAIL_LINK =
@@ -101,7 +101,7 @@ public final class Dies {
             "DIE_MAIL_LINK",
             SkullTextures.PART_LINKS,
             ThemeItemType.CAST,
-            "Die: Mail Links",
+            "模具原型: 盔甲接合物",
             ThemeUtils.PASSIVE + DIE_DESC
         );
     public static final SlimefunItemStack DIE_REPAIR_KIT =
@@ -109,7 +109,7 @@ public final class Dies {
             "DIE_REPAIR_KIT",
             Material.MINECART,
             ThemeItemType.CAST,
-            "Die: Repair Kit",
+            "模具原型: 修复工具",
             ThemeUtils.PASSIVE + DIE_DESC
         );
     protected static final ItemStack[] RECIPE_DIE_SHOVEL_HEAD = new ItemStack[]{

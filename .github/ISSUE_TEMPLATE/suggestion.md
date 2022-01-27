@@ -1,17 +1,19 @@
 ---
-name: Suggestion
-about: Post your suggestion about this plugin
+name: 提供建议
+about: 向本插件提供建议
 title: ''
 labels: suggestion
 assignees: ''
 
 ---
 
-# Suggestion (Required)
+<!-- 请不要修改模板内容，否则你的issue可能会被立刻关闭 -->
+<!-- 如果你使用的不是从构建站点下载的版本，我们无法提供任何支持 -->
 
-<!-- Describe what is your suggestion about this plugin. -->
+## 建议内容 (必须)
 
-# Preview
+<!-- 详细描述你的建议 -->
 
-<!-- If you have pictures/videos to describe your suggestion -->
-<!-- Please upload them here -->
+## 预览图
+
+<!-- 如果你的建议来自模组或其他插件，你可以在这里提供预览图 -->

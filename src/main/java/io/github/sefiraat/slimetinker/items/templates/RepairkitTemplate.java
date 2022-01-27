@@ -9,6 +9,7 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.UnplaceableBlock;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.data.persistent.PersistentDataAPI;
 import lombok.Getter;
+import net.guizhanss.minecraft.slimetinker.utils.LangUtils;
 import net.md_5.bungee.api.ChatColor;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Material;
@@ -39,16 +40,18 @@ public class RepairkitTemplate extends UnplaceableBlock {
     }
 
     public String getName(String material) {
-        return ThemeUtils.toTitleCase(material) + ThemeUtils.ITEM_PART + " " + name;
+        return LangUtils.getMaterialName(material) + ThemeUtils.ITEM_PART + " " + name;
     }
 
     public List<String> getLore(String material, ChatColor color) {
         List<String> list = new ArrayList<>();
         list.add("");
-        list.add(ThemeUtils.PASSIVE + "A repair kit. Used in the Repair Bench");
-        list.add(ThemeUtils.PASSIVE + "to mend tools with a matching head-metal.");
+        list.add(ThemeUtils.PASSIVE + "一套修复工具");
+        list.add(ThemeUtils.PASSIVE + "可以在匠魂修复台中");
+        list.add(ThemeUtils.PASSIVE + "修复损坏的工具");
+        list.add(ThemeUtils.PASSIVE + "材质与该工具的头部对应");
         list.add("");
-        list.add(ThemeUtils.CLICK_INFO + "Material : " + color + ThemeUtils.toTitleCase(material));
+        list.add(ThemeUtils.CLICK_INFO + "材质: " + color + ThemeUtils.toTitleCase(material));
         return list;
     }
 

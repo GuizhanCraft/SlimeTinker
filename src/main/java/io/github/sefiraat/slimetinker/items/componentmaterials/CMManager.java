@@ -110,7 +110,7 @@ public class CMManager {
     protected static final Map<ComponentMaterial, ItemStack> MAP_CAST_REPAIRKIT = new HashMap<>();
     @Getter
     private static final Map<String, ComponentMaterial> MAP = new HashMap<>();
-    private static final String VALIDATE_TRAIT_MESSAGE = "The material {0} does not have a compatible trait type of {1}";
+    private static final String VALIDATE_TRAIT_MESSAGE = "材料 {0} 没有 {1} 特性";
     public final Map<String, MoltenResult> meltingRecipes = new HashMap<>();
     public final Map<String, CastResult> castingRecipes = new HashMap<>();
 

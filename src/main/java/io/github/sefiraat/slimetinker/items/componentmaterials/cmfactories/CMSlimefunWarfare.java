@@ -17,6 +17,7 @@ import io.github.sefiraat.slimetinker.items.componentmaterials.cmelements.CMTrai
 import io.github.sefiraat.slimetinker.managers.SupportedPluginsManager;
 import io.github.sefiraat.slimetinker.utils.IDStrings;
 import io.github.sefiraat.slimetinker.utils.SkullTextures;
+import io.github.sefiraat.slimetinker.utils.ThemeUtils;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import lombok.Getter;
 import lombok.experimental.UtilityClass;
@@ -58,31 +59,36 @@ public final class CMSlimefunWarfare {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Overcharge",
-                            "Stores energy each time you hit a mob.",
-                            "Every 10th attack releases this back."
+                            "超载",
+                            "每次攻击的初始伤害会被存储",
+                            "每10次攻击会释放所有已存储的伤害",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Blinding Speed",
-                            "Gain insane speed but with a side effect."
+                            "失明速度",
+                            "获得速度V效果",
+                            "获得失明效果",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Gravity",
-                            "All nearby entities are slowly pulled",
-                            "towards you"
+                            "引力",
+                            "所有附近的实体",
+                            "会被缓慢地拖向你"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Soul Siphon",
-                            "Stores the souls of killed, hostile, mobs.",
-                            "Damage + 1% per 100 souls. Caps at 100%."
+                            "灵魂虹吸",
+                            "每击杀一个敌对生物可收集1个灵魂",
+                            "每100个灵魂 +1% 输出伤害"
                         ))
                 ));
 
@@ -113,17 +119,22 @@ public final class CMSlimefunWarfare {
                         new CMTrait(
                             CMTraits.PROP_BINDING,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Bouncy II",
-                            "Fall damage halved with a jump boost."
+                            "弹性 II",
+                            "-50% 摔落伤害",
+                            "获得跳跃提升II效果",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         null,
+                        // TODO: 粘液块效果似乎暂未实装
                         new CMTrait(
                             CMTraits.PROP_GAMBESON,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Moon Bounce",
-                            "When on boots, fall damamge is ignored.",
-                            "You also get more bouncy."
+                            "月面弹跳",
+                            "当用于靴子时",
+                            "免疫摔落伤害",
+                            "踩在粘液块上可以弹得更高"
                         ),
                         null)
                 ));
@@ -158,30 +169,37 @@ public final class CMSlimefunWarfare {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Strong and Sticky",
-                            "Dropped blocks go into your inventory",
-                            "when possible to do so"
+                            "强力粘液",
+                            "当物品栏有空间时",
+                            "掉落的方块将直接进入物品栏中",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Flexibility",
-                            "Incoming damage reduced and durability is lost",
-                            "instead. Doesn't work while tool is broken."
+                            "灵活",
+                            "仅在工具未损坏时有效",
+                            "-50% 承受伤害",
+                            "消耗与初始伤害数值相同的耐久",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Regid Flexibility",
-                            "Speed and Jump + 1. Damage Taken + 10%"
+                            "刚性与柔性",
+                            "获得速度效果",
+                            "获得跳跃提升效果",
+                            "+10% 承受伤害"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Deflection",
-                            "10% chance to ignore projectile damage."
+                            "射偏了",
+                            "有10%的几率免疫来自弹射物的伤害"
                         ))
                 ));
 
@@ -208,29 +226,34 @@ public final class CMSlimefunWarfare {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Heavy",
-                            "Mines in a 3x3 Area"
+                            "锤子",
+                            "可挖掘 3x3x3 区域",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Heavy Pommel",
-                            "Struck mobs are slowed and cannot teleport."
+                            "重型鞍座",
+                            "命中的目标会被减速",
+                            "并且无法传送",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Increased Mass",
-                            "Attackers will be knocked back.",
-                            "Gives you slow when procced"
+                            "增重",
+                            "获得减速效果",
+                            "受到伤害时,攻击者会被击退"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Draw",
-                            "5% chance to heal by damage dealt."
+                            "画笔",
+                            "有5%的几率被承受伤害治疗"
                         ))
                 ));
 
@@ -262,32 +285,38 @@ public final class CMSlimefunWarfare {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Brute",
-                            "Slow swinging speed. Hit enemies are stunned",
-                            "briefly. Damage +100% with an additional 33%",
-                            "chance to crit for a further +100%"
+                            "野蛮人",
+                            "获得挖掘疲劳效果",
+                            "命中的目标会被禁锢",
+                            "+100% 输出伤害",
+                            "有33的几率额外 +100% 输出伤害",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Tuff Stuff",
-                            "Knocks back anything hit and stuns."
+                            "击退",
+                            "击退任何命中的生物",
+                            "有几率禁锢目标",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Tempest",
-                            "When wearing 4 peices, chance when hit",
-                            "to summon a tempest."
+                            "闪电风暴",
+                            "当装备全套有闪电风暴特性的盔甲时",
+                            "有几率在周围召唤闪电风暴"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Partial Decay",
-                            "Chance to damage random nearby living",
-                            "things. Will never kill."
+                            "部分衰变",
+                            "有几率随机对周围生物造成伤害",
+                            "不会致死"
                         ))
                 ));
 
@@ -314,30 +343,38 @@ public final class CMSlimefunWarfare {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Innovation",
-                            "+100% Tool and Player EXP during the day."
+                            "创新",
+                            "在白天: ",
+                            "+100% 工具经验获取",
+                            "+100% 玩家经验获取",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Incoporeal Right",
-                            "Tool cannot be dropped or lost on death."
+                            "无形权利",
+                            "工具无法被丢弃",
+                            "不会在死亡时掉落",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "Intense Gaze",
-                            "Entities you look at will teleport to you.",
-                            "Does not work on players or bosses."
+                            "强力凝视",
+                            "你看向的实体会传送到你身边",
+                            "不会对玩家、凋零、末影龙生效"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.SLIMEFUN_WARFARE_NOTE,
-                            "KOTR",
-                            "Chance, when hit, to summon a Knight",
-                            "of the Round. (It's a Golem ;))"
+                            "圆桌骑士",
+                            "受到伤害时有几率",
+                            "在周围生成圆桌骑士",
+                            "(好吧,是铁傀儡)"
                         )
                     )
                 ));

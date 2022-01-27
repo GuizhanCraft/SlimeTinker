@@ -13,8 +13,9 @@ public final class DummyToolTable {
         "DUMMY_TINKERS_TABLE",
         Material.SMITHING_TABLE,
         ThemeItemType.MACHINE,
-        "Tinker's Tool Table",
-        "This item is made on a Tinker's Tool Table."
+        "匠魂工具组装台",
+        "在匠魂工具组装台",
+        "放入相应部件组装获得"
     );
     public static final RecipeType TYPE = new RecipeType(SlimeTinker.inst().getKeys().getWsDummyToolTable(), STACK);
 

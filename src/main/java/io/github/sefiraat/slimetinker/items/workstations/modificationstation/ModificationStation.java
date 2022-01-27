@@ -43,7 +43,7 @@ public class ModificationStation extends MenuBlock {
 
         // No item dummy!
         if (item == null) {
-            player.sendMessage(ThemeUtils.WARNING + "Input a tool/piece of armour into the first slot.");
+            player.sendMessage(ThemeUtils.WARNING + "在第一格放置工具/防具");
             return false;
         }
 
@@ -58,7 +58,7 @@ public class ModificationStation extends MenuBlock {
         } else if (ItemUtils.isArmour(item)) {
             return modArmour(blockMenu, player, item, modItem);
         } else {
-            player.sendMessage(ThemeUtils.WARNING + "The item in the first slot isn't a Tinker's tool/armour piece.");
+            player.sendMessage(ThemeUtils.WARNING + "第一格内的物品不是匠魂工具/防具");
         }
 
         return false;
@@ -68,7 +68,7 @@ public class ModificationStation extends MenuBlock {
     private boolean modTool(BlockMenu blockMenu, Player player, ItemStack item, ItemStack modItem) {
         // No modifier!
         if (modItem == null || !Modifications.getMODIFICATION_LIST_TOOL().contains(ItemUtils.getIdOrType(modItem))) {
-            player.sendMessage(ThemeUtils.WARNING + "Input a valid modifier into the second slot.");
+            player.sendMessage(ThemeUtils.WARNING + "需要在第二格内放入有效的模组物品");
             return false;
         }
 
@@ -84,7 +84,7 @@ public class ModificationStation extends MenuBlock {
         int currentLevel = Modifications.getModLevel(mod, item); // The current level of this mod (or 0)
 
         if (!mod.getRequirementMap().containsKey(currentLevel + 1)) { // Max level
-            player.sendMessage(ThemeUtils.WARNING + "You have already maxed out this modifier");
+            player.sendMessage(ThemeUtils.WARNING + "模组已到最大等级");
             return false;
         }
 
@@ -93,7 +93,7 @@ public class ModificationStation extends MenuBlock {
 
         if (currentAmount <= 0) {
             if (modSlots == 0) { // New mod and no slots
-                player.sendMessage(ThemeUtils.WARNING + "You do not have enough free Modification slots for this");
+                player.sendMessage(ThemeUtils.WARNING + "该工具/武器没有剩余的模组栏位");
                 return false;
             } else { // Remove mod slot
                 ItemUtils.setTinkerModifierSlots(c, modSlots - 1);
@@ -115,7 +115,7 @@ public class ModificationStation extends MenuBlock {
         ItemStack newTool = item.clone();
 
         if (!blockMenu.fits(newTool, OUTPUT_SLOT)) {
-            player.sendMessage(ThemeUtils.WARNING + "Clear the output slot first");
+            player.sendMessage(ThemeUtils.WARNING + "输出栏已满");
             return false;
         }
 
@@ -130,7 +130,7 @@ public class ModificationStation extends MenuBlock {
     private boolean modArmour(BlockMenu blockMenu, Player player, ItemStack item, ItemStack modItem) {
         // No modifier!
         if (modItem == null || !Modifications.getMODIFICATION_LIST_ARMOUR().contains(ItemUtils.getIdOrType(modItem))) {
-            player.sendMessage(ThemeUtils.WARNING + "Input a valid modifier into the second slot.");
+            player.sendMessage(ThemeUtils.WARNING + "需要在第二格内放入有效的模组物品");
             return false;
         }
 
@@ -146,7 +146,7 @@ public class ModificationStation extends MenuBlock {
         int currentLevel = Modifications.getModLevel(mod, item); // The current level of this mod (or 0)
 
         if (!mod.getRequirementMap().containsKey(currentLevel + 1)) { // Max level
-            player.sendMessage(ThemeUtils.WARNING + "You have already maxed out this modifier");
+            player.sendMessage(ThemeUtils.WARNING + "模组已到最大等级");
             return false;
         }
 
@@ -155,7 +155,7 @@ public class ModificationStation extends MenuBlock {
 
         if (currentAmount <= 0) {
             if (modSlots == 0) { // New mod and no slots
-                player.sendMessage(ThemeUtils.WARNING + "You do not have enough free Modification slots for this");
+                player.sendMessage(ThemeUtils.WARNING + "该防具没有剩余的模组栏位");
                 return false;
             } else { // Remove mod slot
                 ItemUtils.setTinkerModifierSlots(c, modSlots - 1);
@@ -177,7 +177,7 @@ public class ModificationStation extends MenuBlock {
         ItemStack newArmour = item.clone();
 
         if (!blockMenu.fits(newArmour, OUTPUT_SLOT)) {
-            player.sendMessage(ThemeUtils.WARNING + "Clear the output slot first");
+            player.sendMessage(ThemeUtils.WARNING + "输出栏已满");
             return false;
         }
 

@@ -1,58 +1,77 @@
-![](https://github.com/Sefiraat/SlimeTinker/blob/master/images/logo/logo_large.png?raw=true)
+![](https://cdn.jsdelivr.net/gh/Sefiraat/SlimeTinker/images/logo/logo_large.png)
 
-SlimeTinker is a Slimefun4 addon that tries it's best to recreate the amazing Tinker's Construct
-Mod ([link](https://www.curseforge.com/minecraft/mc-mods/tinkers-construct)) in Vanilla Minecraft.
+SlimeTinker 是一个 Slimefun4 的附属插件，致力于在非模组服务器中还原知名模组 [匠魂](https://www.curseforge.com/minecraft/mc-mods/tinkers-construct) 的体验。
 
-## Features include:
+SlimeTinker 的非官方中文 Wiki 包含了所有特性的列表: [点击前往](https://slimetinker.guizhanss.wiki)
 
-* The ability to melt all Vanilla and Core Slimefun metals and alloys.
-* Casting out metals into nuggets, ingots and blocks for all metals.
-* Casting into tools parts (Axe Heads, Sword Blades etc.) and casting into Armour Plates and Chain Mail Links.
-* Creation of custom tools based on any combination of Head, Binding and Rod parts for a unique tool
-* Creation of custom armour peices based on any combination of Plates, Gambeson and Mail Link parts for a unique armour
-  peice
-* Each Part/metal combination has a specific trait. Traits range from Auto smelting to Levitation, invisibilty to 3x3
-  mining.
-* Tools and Armour peices level as you use them, as they level they unlock new Modifier slots and can promote from
-  Stone > Gold > Iron > Diamond and Netherite or Leather > Chain > Iron > Diamond > Netherite.
-* Modifier slots can be used to add special modifiers to the tool from bonus drops (on top of looting/fortune) to more
-  haste, damage and more.
-* Tools and armour do not break, they just stop working until you repair them using the same metal type the tool is made
-  of. Armour will fall off when in need of repair
-* Parts can be swapped out at will leaving the tool/armour peices level/mods intact. Want to start with Copper to level
-  faster THEN swap to Reinforced for 3x3? Go for it!
-* All effects/mods (when applicable) work with Vanilla Enchants. Damage, exp and durability modifications are all
-  stackable and work nicely with each other.
-* Configurable traits. You can disable any trait you don't want in the configuration file.
+**已知问题**: 锤子特性禁用无效，等待修复。
 
-For a more detailed look, check out the video from Boomer_1 who runs through the basics of Tinker!
-[![Boomer shows off SlimeTinker](https://res.cloudinary.com/marcomontalbano/image/upload/v1626509062/video_to_markdown/images/youtube--gAUoxj-h26s-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/gAUoxj-h26s "Boomer shows off SlimeTinker")
+## 下载
 
-## Planned Features include:
+**自动更新**: 汉化版构建#15及以后版本包含*自动更新*功能，默认开启。
 
-* Addition of molten metal types from even more addons!
-* Additional tiers of smeltery that will allow for further automation.
+点击这里下载 SlimeTinker: [下载 SlimeTinker](https://builds.guizhanss.net/ybw0014/SlimeTinker-CN/master)
 
-## Configuration
+<p align="center">
+  <a href="https://github.com/ybw0014/SlimeTinker-CN/actions/workflows/maven.yml">
+    <img src="https://github.com/ybw0014/SlimeTinker-CN/actions/workflows/maven.yml/badge.svg" alt="Java CI"/>
+  </a>
+  <a href="https://builds.guizhanss.net/ybw0014/SlimeTinker-CN/master">
+    <img src="https://builds.guizhanss.net/f/ybw0014/SlimeTinker-CN/master/badge.svg" alt="Build status"/>
+  </a>
+</p>
 
-SlimeTinker now supports disabling traits. All the traits are enabled by default. To disable a trait, open the file `/plugins/SlimeTinker/traits.yml`, disable the part under a specific material.
+## 问题反馈
 
-## Suggestions?
+请在[问题追踪器](https://github.com/GuizhanCraft/SlimeTinker-CN/issues)中反馈问题。  
+如果你无法访问GitHub，你也可以在[QQ群](https://ybw0014.net/go/sf-qgroup)内进行反馈。（该条仅对Gitee用户有效)  
+不会在Gitee的问题追踪器中处理任何问题。
 
-SlimeTinker has a LOT of properties and effects and I simply do not have enough ideas to flesh out all of it. So I
-really would welcome any and all suggestions in the Slimefun Addon Community Discord (be sure to stick to the
-slimetinker channel!). If you have ideas, please use this [invite](https://discord.gg/J4KurMDCKU)
+## 功能包括:
 
-## Credits
+* 可以熔化所有原版以及 Slimefun 中的金属与合金。
+* 可以将金属冶炼成粒、锭和块。
+* 可以将金属铸造成工具头(例如镐头、剑刃等)、盔甲板与盔甲接合物。
+* 使用任意工具头、绑定结与手柄部件的组合，制造独特的工具。
+* 使用任意盔甲板、护身软甲与盔甲接合物部件的组合，制造独特的防具。
+* 每个部件都有不同的特性，包括自动熔炼、漂浮、隐身、3x3开采等。
+* 工具与防具会在你使用时升级。升级可以增加新的模组栏位并提升品质。工具品质依次为: 石 > 金 > 铁 > 钻石 > 下界合金; 防具品质依次为: 皮革 > 锁链 > 铁 > 钻石 > 下界合金。
+* 模组栏位可用于向工具与防具添加模组,包括额外掉落(支持与抢夺/时运叠加)、急迫、增加伤害等。
+* 工具与防具不会损坏，但你需要在它们损坏后使用同一类型的金属修复，否则你将无法继续使用工具。护甲则会自动卸到物品栏中。
+* 可以随时更换部件，工具/防具等级会保留。
+* 所有适用的效果和模组都能与原版附魔一起使用。
+* 支持启用/禁用特性。
 
-Big thanks to [Riley](https://github.com/Mooy1) for the great InfinityLib which sped things up greatly. Another big
-thanks to [Martin](https://github.com/martinbrom) who helped us out with ideas and direction. Thanks
-to [Boomer](https://www.youtube.com/channel/UC2ZmER18YBRYube-62-JVpA) for testing, feeding back and breaking things for
-me!
+查看由Boomer_1制作的插件介绍视频: [Youtube](https://youtu.be/gAUoxj-h26s)
 
+## 配置
 
-## Thanks!
+SlimeTinker现已支持禁用特性。所有的特性默认启用。  
+要禁用特性，打开 `/plugins/SlimeTinker/traits.yml`,  
+将指定材料的部件设置为`false`即可。
 
-A big thanks to the owners of **mct.tantrum.org** who have tested nearly everything I have made and really given me direction and drive to make these things and was the first server willing to take the buggy mess that Tinker was, at first, onto their server!
+部件对应：
 
-Another big shoutout to **GentlemanCheesy** of **mc.talosmp.net** for being my first (and as of writing this, only!) sponsor. A few coffee's a month to make me feel better about making these addons <3
+- `HEAD`: 工具头
+- `BINDING`: 绑定结
+- `ROD`: 手柄
+- `PLATE`: 盔甲板
+- `GAMBESON`: 护身软甲
+- `LINKS`: 盔甲接合物
+
+## 计划中的新功能:
+
+* 增加对更多附属插件中的金属的支持
+* 增加更高级的冶炼炉，以支持自动化
+
+## 建议
+
+SlimeTinker 有**大量**的特性与效果，我没有足够的想法来充实。所以我欢迎任何人在 Slimefun Addon Community 的 Discord 服务器中反馈 (记得在slimetinker频道里)。 如果你有任何想法，请点击 [邀请链接](https://discord.gg/SqD3gg5SAU) 加入服务器。
+
+## 感谢
+
+感谢 [Riley](https://github.com/Mooy1) 提供的 InfinityLib, 它加快了开发进度。另外要感谢 [Martin](https://github.com/martinbrom) 帮我们提出许多点子与开发方向。感谢 [Boomer](https://www.youtube.com/channel/UC2ZmER18YBRYube-62-JVpA) 测试并提供反馈。
+
+感谢 **mct.tantrum.org** 的服主提供的测试环境。
+
+另外，感谢 **mc.talosmp.net** 的 **GentlemanCheesy** 成为本人的首位赞助者！每个月能多喝一杯咖啡让我能有动力更好地编写插件。

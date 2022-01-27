@@ -52,21 +52,21 @@ public final class RightClickEvents {
             if (p.isSneaking()) {
                 // Setting location
                 PersistentDataAPI.setString(im, keyLoc, GeneralUtils.serializeLocation(p.getLocation()));
-                p.sendMessage(ThemeUtils.SUCCESS + "Location set!");
+                p.sendMessage(ThemeUtils.SUCCESS + "已设置位置!");
                 i.setItemMeta(im);
             } else {
                 // Actioning location
                 if (ItemUtils.onCooldown(i, cooldownName)) {
-                    p.sendMessage(ThemeUtils.WARNING + "Recall is on cooldown!");
+                    p.sendMessage(ThemeUtils.WARNING + "召回技能冷却中");
                     return;
                 } else if (!PersistentDataAPI.hasString(im, keyLoc)) {
-                    p.sendMessage(ThemeUtils.WARNING + "You have not yet set a location to recall to!");
+                    p.sendMessage(ThemeUtils.WARNING + "你还没有设置召回的位置");
                     return;
                 }
                 String sl = PersistentDataAPI.getString(im, keyLoc);
                 Location l = GeneralUtils.deserializeLocation(sl);
                 p.teleport(l);
-                p.sendMessage(ThemeUtils.SUCCESS + "Whoosh!");
+                p.sendMessage(ThemeUtils.SUCCESS + "正在召回!");
                 ItemUtils.setCooldown(i, cooldownName, 300000);
             }
 
@@ -92,7 +92,7 @@ public final class RightClickEvents {
                 p.getWorld().playEffect(friend.getPlayer().getLocation(), Effect.ENDEREYE_LAUNCH, 10);
                 ItemUtils.setCooldown(i, "NOCLIP", 300000);
             } else {
-                p.sendMessage(ThemeUtils.WARNING + "Couldn't teleport! Try again.");
+                p.sendMessage(ThemeUtils.WARNING + "无法传送，请稍后再试");
             }
         }
     }
@@ -126,7 +126,7 @@ public final class RightClickEvents {
         ItemStack i = friend.getActiveStack();
         int cdMinutes = 2;
         if (ItemUtils.onCooldown(i, cdName)) {
-            p.sendMessage(ThemeUtils.WARNING + "It's Natural is on cooldown");
+            p.sendMessage(ThemeUtils.WARNING + "自然法则技能冷却中");
         } else {
             List<Animals> animals = EntityUtils.getNearbyEntitiesByType(Animals.class, p, 3, 3, 3);
             if (animals.size() >= 2) {
@@ -156,7 +156,7 @@ public final class RightClickEvents {
                 task.runTaskTimer(SlimeTinker.inst(), 0, 20);
                 ItemUtils.setCooldown(i, cdName, 20 * 60000L);
             } else {
-                p.sendMessage(ThemeUtils.WARNING + "This ability is on cooldown.");
+                p.sendMessage(ThemeUtils.WARNING + "王牌特工技能冷却中");
             }
         }
     }
@@ -218,7 +218,7 @@ public final class RightClickEvents {
                 ItemUtils.setCooldown(tool, "celebrate", 3600000);
             }
         } else {
-            player.sendMessage(ThemeUtils.WARNING + "This ability is on cooldown.");
+            player.sendMessage(ThemeUtils.WARNING + "庆祝技能冷却中");
         }
     }
 }

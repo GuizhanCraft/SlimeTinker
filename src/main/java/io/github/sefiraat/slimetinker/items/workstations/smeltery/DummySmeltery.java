@@ -13,10 +13,10 @@ public final class DummySmeltery {
         "DUMMY_TINKERS_SMELTERY",
         Material.CHISELED_POLISHED_BLACKSTONE,
         ThemeItemType.MACHINE,
-        "Tinker's Smeltery",
-        "This item is cast out from the",
-        "tinkers smeltery using the",
-        "relevant cast and metal/liquid."
+        "匠魂冶炼炉",
+        "这个物品是在匠魂冶炼炉中",
+        "使用特定的模具",
+        "浇铸相应的熔融金属/液体获得"
     );
     public static final RecipeType TYPE = new RecipeType(SlimeTinker.inst().getKeys().getWsDummySmeltery(), STACK);
 

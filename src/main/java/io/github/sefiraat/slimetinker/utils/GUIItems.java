@@ -4,6 +4,7 @@ import io.github.sefiraat.slimetinker.items.componentmaterials.CMManager;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerHead;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerSkin;
+import net.guizhanss.minecraft.slimetinker.utils.LangUtils;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -23,7 +24,7 @@ public final class GUIItems {
     public static CustomItemStack menuBackgroundInput() {
         return new CustomItemStack(
             Material.LIGHT_BLUE_STAINED_GLASS_PANE,
-            ChatColor.BLUE + "Input",
+            ChatColor.BLUE + "输入",
             " "
         );
     }
@@ -31,7 +32,7 @@ public final class GUIItems {
     public static CustomItemStack menuBackgroundOutput() {
         return new CustomItemStack(
             Material.ORANGE_STAINED_GLASS_PANE,
-            ChatColor.RED + "Output",
+            ChatColor.RED + "输出",
             " "
         );
     }
@@ -39,7 +40,7 @@ public final class GUIItems {
     public static CustomItemStack menuBackgroundCast() {
         return new CustomItemStack(
             Material.LIME_STAINED_GLASS_PANE,
-            ChatColor.GREEN + "Cast/Die",
+            ChatColor.GREEN + "模具/模具原型",
             " "
         );
     }
@@ -47,7 +48,7 @@ public final class GUIItems {
     public static CustomItemStack menuPreview() {
         return new CustomItemStack(
             Material.LIME_STAINED_GLASS_PANE,
-            ChatColor.GREEN + "Preview",
+            ChatColor.GREEN + "预览",
             " "
         );
     }
@@ -55,7 +56,7 @@ public final class GUIItems {
     public static CustomItemStack menuBackgroundPreview() {
         return new CustomItemStack(
             Material.LIME_STAINED_GLASS_PANE,
-            ChatColor.GREEN + "Preview",
+            ChatColor.GREEN + "预览",
             " "
         );
     }
@@ -63,48 +64,48 @@ public final class GUIItems {
     public static CustomItemStack menuMarkerRod() {
         return new CustomItemStack(
             Material.RED_STAINED_GLASS_PANE,
-            ChatColor.RED + "Rod Input",
-            " "
+            ChatColor.RED + "放入手柄",
+            ThemeUtils.PASSIVE + "在下面的栏位放入手柄部件"
         );
     }
 
     public static CustomItemStack menuMarkerBinder() {
         return new CustomItemStack(
             Material.RED_STAINED_GLASS_PANE,
-            ChatColor.RED + "Binder Input",
-            " "
+            ChatColor.RED + "放入绑定结",
+            ThemeUtils.PASSIVE + "在下面的栏位放入绑定结部件"
         );
     }
 
     public static CustomItemStack menuMarkerHead() {
         return new CustomItemStack(
             Material.RED_STAINED_GLASS_PANE,
-            ChatColor.RED + "Head/Blade Input",
-            " "
+            ChatColor.RED + "放入工具/武器头",
+            ThemeUtils.PASSIVE + "在下面的栏位放入工具/武器头部件"
         );
     }
 
     public static CustomItemStack menuMarkerLinks() {
         return new CustomItemStack(
             Material.RED_STAINED_GLASS_PANE,
-            ChatColor.RED + "Links Input",
-            " "
+            ChatColor.RED + "放入盔甲接合物",
+            ThemeUtils.PASSIVE + "在下面的栏位放入盔甲接合物部件"
         );
     }
 
     public static CustomItemStack menuMarkerGambeson() {
         return new CustomItemStack(
             Material.RED_STAINED_GLASS_PANE,
-            ChatColor.RED + "Gambeson Input",
-            " "
+            ChatColor.RED + "放入护身软甲",
+            ThemeUtils.PASSIVE + "在下面的栏位放入护身软甲"
         );
     }
 
     public static CustomItemStack menuMarkerPlates() {
         return new CustomItemStack(
             Material.RED_STAINED_GLASS_PANE,
-            ChatColor.RED + "Plates Input",
-            " "
+            ChatColor.RED + "放入盔甲板",
+            ThemeUtils.PASSIVE + "在下面的栏位放入盔甲板"
         );
     }
 
@@ -124,9 +125,9 @@ public final class GUIItems {
             skull = PlayerHead.getItemStack(PlayerSkin.fromBase64(SkullTextures.TANK_EMPTY));
         }
         List<String> meta = new ArrayList<>();
-        meta.add(ThemeUtils.GUI_HEAD + "Lava Tank");
+        meta.add(ThemeUtils.GUI_HEAD + "岩浆罐");
         meta.add("");
-        meta.add(ThemeUtils.CLICK_INFO + "Lava: " + ChatColor.WHITE + fillAmt + " / " + fillMax);
+        meta.add(ThemeUtils.CLICK_INFO + "岩浆: " + ChatColor.WHITE + fillAmt + " / " + fillMax);
         return new CustomItemStack(
             skull,
             meta
@@ -149,23 +150,23 @@ public final class GUIItems {
             skull = PlayerHead.getItemStack(PlayerSkin.fromBase64(SkullTextures.TANK_EMPTY));
         }
         List<String> meta = new ArrayList<>();
-        meta.add(ThemeUtils.GUI_HEAD + "Metals Tank");
+        meta.add(ThemeUtils.GUI_HEAD + "金属罐");
         meta.add("");
-        meta.add(ThemeUtils.CLICK_INFO + "Total Metal: " + ChatColor.WHITE + fillAmt + " / " + fillMax);
+        meta.add(ThemeUtils.CLICK_INFO + "金属容量: " + ChatColor.WHITE + fillAmt + " / " + fillMax);
         meta.add("");
         if (map != null) {
             for (Map.Entry<String, Integer> e : map.entrySet()) {
                 String name =
                     CMManager.getById(e.getKey()).getColor() +
-                        ThemeUtils.toTitleCase(e.getKey());
+                        LangUtils.getMaterialName(e.getKey());
                 String amount = e.getValue().toString();
-                meta.add(ThemeUtils.CLICK_INFO + name + ": " + ChatColor.WHITE + amount + " units.");
+                meta.add(ThemeUtils.CLICK_INFO + name + ": " + ChatColor.WHITE + amount + " 单位");
             }
         }
         meta.add("");
-        meta.add(ThemeUtils.PASSIVE + "Metals pour out from the " + ChatColor.BOLD + "top" + ThemeUtils.PASSIVE + " first");
+        meta.add(ThemeUtils.PASSIVE + "浇铸将从" + ChatColor.BOLD + "最上层" + ThemeUtils.PASSIVE + "的金属开始");
         meta.add("");
-        meta.add(ThemeUtils.CLICK_INFO + "Click to cycle metal order.");
+        meta.add(ThemeUtils.CLICK_INFO + "点击" + ChatColor.WHITE + "将最上层的金属移至最下层");
         return new CustomItemStack(
             skull,
             meta
@@ -175,90 +176,96 @@ public final class GUIItems {
     public static CustomItemStack menuPurge() {
         return new CustomItemStack(
             PlayerHead.getItemStack(PlayerSkin.fromBase64(SkullTextures.BUTTON_PURGE)),
-            ThemeUtils.GUI_HEAD + "Purge Metals",
+            ThemeUtils.GUI_HEAD + "清除金属",
             "",
-            ThemeUtils.PASSIVE + "Purge unwanted metals from the tank.",
+            ThemeUtils.PASSIVE + "可以从金属罐中直接清楚不需要的金属",
             "",
-            ThemeUtils.CLICK_INFO + "Left Click: " + ChatColor.WHITE + "Remove the TOP MOST metal",
-            ThemeUtils.CLICK_INFO + "Right Click: " + ChatColor.WHITE + "Remove ALL metals"
+            ThemeUtils.CLICK_INFO + "左键点击" + ChatColor.WHITE + "移除最上层金属",
+            ThemeUtils.CLICK_INFO + "右键点击" + ChatColor.WHITE + "移除所有金属"
         );
     }
 
     public static CustomItemStack menuAlloy() {
         return new CustomItemStack(
             PlayerHead.getItemStack(PlayerSkin.fromBase64(SkullTextures.BUTTON_ALLOY)),
-            ThemeUtils.GUI_HEAD + "Alloy Metals",
+            ThemeUtils.GUI_HEAD + "冶炼合金",
             "",
-            ThemeUtils.PASSIVE + "Mixes up the metals in the tank to",
-            ThemeUtils.PASSIVE + "try to create an alloy."
+            ThemeUtils.PASSIVE + "混合金属罐中的液体",
+            ThemeUtils.PASSIVE + "来尝试冶炼合金"
         );
     }
 
     public static CustomItemStack menuPour() {
         return new CustomItemStack(
             PlayerHead.getItemStack(PlayerSkin.fromBase64(SkullTextures.BUCKET_ORANGE)),
-            ThemeUtils.GUI_HEAD + "Pour content",
+            ThemeUtils.GUI_HEAD + "浇铸",
             "",
-            ThemeUtils.PASSIVE + "Pours the first metal into the",
-            ThemeUtils.PASSIVE + "cast. After cooling, outputs the",
-            ThemeUtils.PASSIVE + "final product."
+            ThemeUtils.PASSIVE + "将最上层的金属进行浇铸",
+            ThemeUtils.PASSIVE + "模具将决定熔融金属的样式",
+            ThemeUtils.PASSIVE + "成品将在输出栏中"
         );
     }
 
     public static CustomItemStack menuCraftWorkbench() {
         return new CustomItemStack(
             Material.FLETCHING_TABLE,
-            ThemeUtils.GUI_HEAD + "Craft",
+            ThemeUtils.GUI_HEAD + "合成",
             "",
-            ThemeUtils.PASSIVE + "Let's get crafting!"
+            ThemeUtils.CLICK_INFO + "点击此处" + ChatColor.WHITE + "合成物品"
         );
     }
 
     public static CustomItemStack menuCraftToolTable() {
         return new CustomItemStack(
             Material.SMITHING_TABLE,
-            ThemeUtils.GUI_HEAD + "Form Tool",
+            ThemeUtils.GUI_HEAD + "组装工具/武器",
             "",
-            ThemeUtils.PASSIVE + "Forms a tool from the three given",
-            ThemeUtils.PASSIVE + "parts (Rod, Binding and Head/Blade)"
+            ThemeUtils.PASSIVE + "将三个部件组装成工具/武器:",
+            ThemeUtils.PASSIVE + "手柄,绑定结,工具/武器头",
+            ThemeUtils.CLICK_INFO + "点击此处" + ChatColor.WHITE + "组装"
         );
     }
 
     public static CustomItemStack menuCraftArmourTable() {
         return new CustomItemStack(
                 Material.SMITHING_TABLE,
-                ThemeUtils.GUI_HEAD + "Form Armour",
+                ThemeUtils.GUI_HEAD + "组装防具",
                 "",
-                ThemeUtils.PASSIVE + "Forms a piece of armour from the three given",
-                ThemeUtils.PASSIVE + "parts (Plate, Gambeson and Links)"
+                ThemeUtils.PASSIVE + "将三个部件组装成防具:",
+                ThemeUtils.PASSIVE + "盔甲板,护身软甲,盔甲接合物",
+                ThemeUtils.CLICK_INFO + "点击此处" + ChatColor.WHITE + "组装"
         );
     }
 
     public static CustomItemStack menuCraftRepair() {
         return new CustomItemStack(
             Material.CARTOGRAPHY_TABLE,
-            ThemeUtils.GUI_HEAD + "Repair",
+            ThemeUtils.GUI_HEAD + "修复",
             "",
-            ThemeUtils.PASSIVE + "Repairs the tool in the first slot",
-            ThemeUtils.PASSIVE + "using the repair kit in the second."
+            ThemeUtils.PASSIVE + "在第一格中放入需要修复的工具/防具",
+            ThemeUtils.PASSIVE + "在第二格中放入工具头/盔甲板对应材质的修复工具",
+            ThemeUtils.CLICK_INFO + "点击此处" + ChatColor.WHITE + "修复"
         );
     }
 
     public static CustomItemStack menuCraftMod() {
         return new CustomItemStack(
             Material.GRINDSTONE,
-            ThemeUtils.GUI_HEAD + "Apply Modification",
-            "",
-            ThemeUtils.PASSIVE + "Apply the modification to the tool."
+            ThemeUtils.GUI_HEAD + "安装模组",
+            ThemeUtils.PASSIVE + "在第一格中放入工具/武器/防具",
+            ThemeUtils.PASSIVE + "在第二格中放入要安装的模组",
+            ThemeUtils.CLICK_INFO + "点击此处" + ChatColor.WHITE + "安装模组"
         );
     }
 
     public static CustomItemStack menuCraftSwap() {
         return new CustomItemStack(
             Material.LOOM,
-            ThemeUtils.GUI_HEAD + "Swap out part",
+            ThemeUtils.GUI_HEAD + "更换部件",
             "",
-            ThemeUtils.PASSIVE + "Swap tool parts."
+            ThemeUtils.PASSIVE + "在第一格中放入工具/武器/防具",
+            ThemeUtils.PASSIVE + "在第二格中放入要更换的部件",
+            ThemeUtils.CLICK_INFO + "点击此处" + ChatColor.WHITE + "更换部件"
         );
     }
 

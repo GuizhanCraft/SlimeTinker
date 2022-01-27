@@ -13,11 +13,8 @@ public final class DummyModificationStation {
         "DUMMY_MODIFICATION_STATION",
         Material.GRINDSTONE,
         ThemeItemType.MACHINE,
-        "Tinker's Modification Station",
-        "Tools are augmented on the Modification",
-        "station using the appropriate material.",
-        "Once enough material has been added, the",
-        "modification will level."
+        "匠魂模组工作站",
+        "在匠魂模组工作站中给工具/武器安装模组"
     );
     public static final RecipeType TYPE = new RecipeType(SlimeTinker.inst().getKeys().getWsDummyToolTable(), STACK);
 

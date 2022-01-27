@@ -23,6 +23,7 @@ import io.github.sefiraat.slimetinker.utils.enums.ThemeItemType;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.data.persistent.PersistentDataAPI;
 import lombok.Data;
+import net.guizhanss.minecraft.slimetinker.utils.LangUtils;
 import net.md_5.bungee.api.ChatColor;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Material;
@@ -167,25 +168,26 @@ public class ComponentMaterial {
     }
 
     public SlimefunItemStack headStack(String name, String type, String skullTexture) {
-        String titName = ThemeUtils.toTitleCase(name);
+        String titName = LangUtils.getMaterialName(name);
+        String headName = LangUtils.getToolHead(type);
         return ThemeUtils.themedItemStack(
             "PART_HEAD_" + type + name,
             skullTexture,
             ThemeItemType.PART,
-            getColor() + titName + ThemeUtils.ITEM_PART + " " + ThemeUtils.toTitleCase(type) + " Head",
-            ThemeUtils.PASSIVE + "A tool head made of " + titName + "."
+            getColor() + titName + ThemeUtils.ITEM_PART + " " + headName,
+            ThemeUtils.PASSIVE + "由" + titName + "制成的" + headName
         );
     }
 
     // TODO This is now very disjointed. Needs all wrapping in - to resolve the this == this issue
     public SlimefunItemStack bindingStack(String name) {
-        String titName = ThemeUtils.toTitleCase(name);
+        String titName = LangUtils.getMaterialName(name);
         SlimefunItemStack i = ThemeUtils.themedItemStack(
             "PART_BINDING_" + name,
             SkullTextures.PART_BINDING,
             ThemeItemType.PART,
-            getColor() + titName + ThemeUtils.ITEM_PART + " Binding",
-            ThemeUtils.PASSIVE + "A binding made of " + titName + "."
+            getColor() + titName + ThemeUtils.ITEM_PART +  " 绑定结",
+            ThemeUtils.PASSIVE + "由" + titName + "制成的绑定结"
         );
 
         ItemMeta im = i.getItemMeta();
@@ -199,36 +201,37 @@ public class ComponentMaterial {
     }
 
     public SlimefunItemStack rodStack(String name) {
-        String titName = ThemeUtils.toTitleCase(name);
+        String titName = LangUtils.getMaterialName(name);
         return ThemeUtils.themedItemStack(
             "PART_ROD_" + name,
             SkullTextures.PART_TOOL_ROD,
             ThemeItemType.PART,
-            getColor() + titName + ThemeUtils.ITEM_PART + " Rod",
-            ThemeUtils.PASSIVE + "A tool rod made of " + titName + "."
+            getColor() + titName + ThemeUtils.ITEM_PART + " 手柄",
+            ThemeUtils.PASSIVE + "由" + titName + "制成的手柄"
         );
     }
 
     public SlimefunItemStack platesStack(String name, String type, String skullTexture) {
-        String titName = ThemeUtils.toTitleCase(name);
+        String titName = LangUtils.getMaterialName(name);
+        String partName = LangUtils.getArmorPart(type);
         return ThemeUtils.themedItemStack(
             "PART_PLATES_" + type + name,
             skullTexture,
             ThemeItemType.PART,
-            getColor() + titName + ThemeUtils.ITEM_PART + " " + ThemeUtils.toTitleCase(type) + " Plates",
-            ThemeUtils.PASSIVE + "A set of armour plates made of " + titName + "."
+            getColor() + titName + ThemeUtils.ITEM_PART + " " + partName + "板",
+            ThemeUtils.PASSIVE + "由" + titName + "制成的盔甲板"
         );
     }
 
     // TODO This is now very disjointed. Needs all wrapping in - to resolve the this == this issue
     public SlimefunItemStack gambesonStack(String name) {
-        String titName = ThemeUtils.toTitleCase(name);
+        String titName = LangUtils.getMaterialName(name);
         SlimefunItemStack i = ThemeUtils.themedItemStack(
             "PART_GAMBESON_" + name,
             SkullTextures.PART_GAMBESON,
             ThemeItemType.PART,
-            getColor() + titName + ThemeUtils.ITEM_PART + " Gambeson",
-            ThemeUtils.PASSIVE + "A gambeson made of " + titName + "."
+            getColor() + titName + ThemeUtils.ITEM_PART + " 护身软甲",
+            ThemeUtils.PASSIVE + "由" + titName + "制成的护身软甲"
         );
 
         ItemMeta im = i.getItemMeta();
@@ -241,25 +244,24 @@ public class ComponentMaterial {
     }
 
     public SlimefunItemStack linksStack(String name) {
-        String titName = ThemeUtils.toTitleCase(name);
+        String titName = LangUtils.getMaterialName(name);
         return ThemeUtils.themedItemStack(
             "PART_LINKS_" + name,
             SkullTextures.PART_LINKS,
             ThemeItemType.PART,
-            getColor() + titName + ThemeUtils.ITEM_PART + " Mail Links",
-            ThemeUtils.PASSIVE + "A set of mail links made of " + titName + "."
+            getColor() + titName + ThemeUtils.ITEM_PART + " 盔甲接合物",
+            ThemeUtils.PASSIVE + "由" + titName + "制成的盔甲接合物"
         );
     }
 
     public SlimefunItemStack repairStack(String name) {
-        String titName = ThemeUtils.toTitleCase(name);
+        String titName = LangUtils.getMaterialName(name);
         return ThemeUtils.themedItemStack(
             "PART_REPAIR_KIT_" + name,
             Material.CHEST_MINECART,
             ThemeItemType.PART,
-            getColor() + titName + ThemeUtils.ITEM_PART + " Repair Kit",
-            ThemeUtils.PASSIVE + "A kit that is able to repair items",
-            "made out of " + titName + "."
+            getColor() + titName + ThemeUtils.ITEM_PART + " 修复工具",
+            ThemeUtils.PASSIVE + "由" + titName + "制成的修复工具"
         );
     }
 

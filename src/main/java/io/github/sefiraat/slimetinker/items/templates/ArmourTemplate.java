@@ -5,12 +5,12 @@ import io.github.sefiraat.slimetinker.items.componentmaterials.CMManager;
 import io.github.sefiraat.slimetinker.utils.Experience;
 import io.github.sefiraat.slimetinker.utils.IDStrings;
 import io.github.sefiraat.slimetinker.utils.ItemUtils;
-import io.github.sefiraat.slimetinker.utils.ThemeUtils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.UnplaceableBlock;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.data.persistent.PersistentDataAPI;
+import net.guizhanss.minecraft.slimetinker.utils.LangUtils;
 import net.md_5.bungee.api.ChatColor;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Material;
@@ -25,10 +25,10 @@ public class ArmourTemplate extends UnplaceableBlock {
 
     public String getName(ArmourDefinition armourDefinition) {
         return
-            CMManager.getById(armourDefinition.getPlateMaterial()).getColor() + ThemeUtils.toTitleCase(armourDefinition.getPlateMaterial()) + "-" +
-                CMManager.getById(armourDefinition.getGambesonMaterial()).getColor() + ThemeUtils.toTitleCase(armourDefinition.getGambesonMaterial()) + "-" +
-                CMManager.getById(armourDefinition.getLinksMaterial()).getColor() + ThemeUtils.toTitleCase(armourDefinition.getLinksMaterial()) + " " +
-                ChatColor.WHITE + ThemeUtils.toTitleCase(armourDefinition.getPartType());
+            CMManager.getById(armourDefinition.getPlateMaterial()).getColor() + LangUtils.getMaterialName(armourDefinition.getPlateMaterial()) + "-" +
+                CMManager.getById(armourDefinition.getGambesonMaterial()).getColor() + LangUtils.getMaterialName(armourDefinition.getGambesonMaterial()) + "-" +
+                CMManager.getById(armourDefinition.getLinksMaterial()).getColor() + LangUtils.getMaterialName(armourDefinition.getLinksMaterial()) + " " +
+                ChatColor.WHITE + LangUtils.getArmorPart(armourDefinition.getPartType());
 
     }
 

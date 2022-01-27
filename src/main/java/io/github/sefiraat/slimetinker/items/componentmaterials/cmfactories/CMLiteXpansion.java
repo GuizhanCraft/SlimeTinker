@@ -18,6 +18,7 @@ import io.github.sefiraat.slimetinker.items.componentmaterials.cmelements.CMTrai
 import io.github.sefiraat.slimetinker.managers.SupportedPluginsManager;
 import io.github.sefiraat.slimetinker.utils.IDStrings;
 import io.github.sefiraat.slimetinker.utils.SkullTextures;
+import io.github.sefiraat.slimetinker.utils.ThemeUtils;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import lombok.Getter;
 import lombok.experimental.UtilityClass;
@@ -60,16 +61,18 @@ public final class CMLiteXpansion {
                         new CMTrait(
                             CMTraits.PROP_BINDING,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Insulated",
-                            "Become immune to lightning."
+                            "绝缘",
+                            "免疫闪电伤害",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         null,
                         new CMTrait(
                             CMTraits.PROP_GAMBESON,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Sweaty",
-                            "A rubber lining is WAY too hot."
+                            "出汗",
+                            "橡胶护身软甲真的太热了!"
                         ),
                         null)
                 ));
@@ -97,32 +100,43 @@ public final class CMLiteXpansion {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Really Stable",
-                            "Does nothing. Perhaps if you level it up?."
+                            "真的稳定",
+                            "真的没有特性",
+                            "不过也许升级后会有呢?",
+                            "(工具10级达到后",
+                            "+(工具等级 * 10)% 输出伤害)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Manners Maketh Man",
-                            "Speed 1, Damage + 50%. Your fights look",
-                            "super cool."
+                            "不知礼，无以立也",
+                            "获得速度效果",
+                            "+50% 输出伤害",
+                            "你的战斗过程将变得炫酷",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Kingsman",
-                            "On right click, summons a colorful cavelcade",
-                            "of pure desctruction.",
-                            "Does nothing if you don't have manners.",
-                            "Requires 4 peices with Kingsman."
+                            "王牌特工",
+                            "需要满足以下全部条件才能生效:",
+                            "- 装备全套有王牌特工特性的盔甲",
+                            "- 熟知礼仪 (不知礼，无以立也)",
+                            "",
+                            "右键点击时召唤毁灭阵",
+                            "对阵中的所有生物造成伤害",
+                            "(20分钟冷却时间)"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Narrowing",
-                            "Attackers are blinded."
+                            "看不到我",
+                            "攻击者获得失明效果"
                         ))
                 ));
 
@@ -153,29 +167,37 @@ public final class CMLiteXpansion {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Mixed Metals",
-                            "Has the effects of all it's ingredients but",
-                            "their power is halved."
+                            "合金",
+                            "随机获得其冶炼材料的特性",
+                            "但效果减半",
+                            "(随机获得速度,防火,幸运效果)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Stiff",
-                            "Double damage. Unlucky!"
+                            "倒霉鬼",
+                            "+50% 输出伤害",
+                            "获得厄运III效果",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Experienced",
-                            "All tool/armour exp + 10%"
+                            "有经验的",
+                            "+10% 工具经验获取",
+                            "+10% 玩家经验获取"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Mix it up!",
-                            "Mixes things up a bit when hit"
+                            "混乱",
+                            "受到攻击时",
+                            "有几率与攻击者互换位置"
                         ))
                 ));
 
@@ -202,30 +224,35 @@ public final class CMLiteXpansion {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Cleave",
-                            "Damage all nearby mobs when you attack.",
-                            "Cleave damage does not trigger Tinker's effects."
+                            "散射",
+                            "攻击时对周围所有生物同时造成伤害",
+                            "散射的伤害不会受到其他特性或模组的影响",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Heavy Duty",
-                            "When durability gets low, it eats 1 iron",
-                            "ingot from your inventory to restore some."
+                            "高负荷",
+                            "每损失50点耐久,会",
+                            "消耗一块铁锭来恢复50点耐久",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Even More Advanced",
-                            "Advanced modifiers +1 for each piece."
+                            "更加高级",
+                            "Advanced modifiers +1 for each piece.",
+                            "(开发中的特性,暂不翻译)"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Superhot",
-                            "Chance to set nearby linving things on fire."
+                            "高温",
+                            "有几率使周围实体着火"
                         ))
                 ));
 
@@ -285,29 +312,38 @@ public final class CMLiteXpansion {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Heat Resistant",
-                            "Lava is no longer your enemy."
+                            "耐热",
+                            "你可以在岩浆里游泳",
+                            "(免疫火焰与岩浆伤害)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Vampirism",
-                            "Chance to heal by damage given.",
-                            "Damage dealt varies by time of day."
+                            "吸血鬼",
+                            "造成伤害时有33%的几率恢复1点血量",
+                            "-50% 伤害(日间)",
+                            "+50% 伤害(夜间)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Radioactive Plates",
-                            "Poisons enemies that attack you."
+                            "放射性盔甲板",
+                            "受到伤害时",
+                            "对攻击者施加中毒效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Building Rage",
-                            "Chance, when hit, to gain Speed 1 and Haste 1"
+                            "建筑狂怒",
+                            "有20%的几率在受到伤害时",
+                            "获得速度效果",
+                            "获得急迫效果"
                         ))
                 ));
 
@@ -335,16 +371,19 @@ public final class CMLiteXpansion {
                         new CMTrait(
                             CMTraits.PROP_BINDING,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Nimble",
-                            "Speed 1. Take 33% less damage"
+                            "敏捷",
+                            "获得速度效果",
+                            "-33% 承受伤害",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         null,
                         new CMTrait(
                             CMTraits.PROP_GAMBESON,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Carbon Fibre",
-                            "Speed + 1"
+                            "碳纤维",
+                            "获得速度效果"
                         ),
                         null)
                 ));
@@ -372,33 +411,37 @@ public final class CMLiteXpansion {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Terrible",
-                            "+300% durability loss. 0% Exp Gain."
+                            "可怕",
+                            "+300% 耐久消耗",
+                            "-100% 工具经验获取",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Brains, Not Brawn.",
-                            "Tool exp gain is doubled. Damage",
-                            "dealt is halved."
+                            "这是个脑力活",
+                            "+100% 工具经验获取",
+                            "-50% 输出伤害",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Pathetic",
-                            "Do not wear this armour.",
-                            "VERY BAD THINGS MAY HAPPEN",
-                            "YOU HAVE BEEN WARNED",
-                            "Exp + 400%."
+                            "可悲",
+                            "警告: 不要穿上这件盔甲",
+                            "会有坏事发生",
+                            "+400% 玩家经验获取"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Falling Apart",
-                            "Exp + 200%. Chance for the amrour to",
-                            "just fall off!"
+                            "分崩离析",
+                            "+200% 玩家经验获取",
+                            "受到伤害时护甲有几率直接掉落"
                         ))
                 ));
 
@@ -425,29 +468,37 @@ public final class CMLiteXpansion {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Protective",
-                            "Saves you from deaths. 20min CD."
+                            "保护",
+                            "使你免于死亡",
+                            "(20分钟冷却时间)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Warp",
-                            "Turns your opponent around. 20s CD."
+                            "别看我",
+                            "使目标看向你的朝向",
+                            "(20秒冷却时间)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Indomitable",
-                            "10% of all damage is ignored and reflected."
+                            "不屈",
+                            "承受伤害的10%会被反弹至攻击者"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.LITEXPANSION_NOTE,
-                            "Unconventional Power",
-                            "Any damage taken is remembered. Right",
-                            "Click to charge inventory items."
+                            "非常规力量",
+                            "承受的伤害会被转化为能源",
+                            "并存储在盔甲中(伤害不会被取消)",
+                            "右键点击释放存储的能源",
+                            "用于给物品栏中所有的物品充电"
                         ))
                 ));
 

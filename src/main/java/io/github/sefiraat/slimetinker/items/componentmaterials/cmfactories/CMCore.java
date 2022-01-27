@@ -18,6 +18,7 @@ import io.github.sefiraat.slimetinker.items.componentmaterials.cmelements.CMTrai
 import io.github.sefiraat.slimetinker.managers.SupportedPluginsManager;
 import io.github.sefiraat.slimetinker.utils.IDStrings;
 import io.github.sefiraat.slimetinker.utils.SkullTextures;
+import io.github.sefiraat.slimetinker.utils.ThemeUtils;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import lombok.Getter;
@@ -60,29 +61,31 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Stability",
-                            "Does... nothing!"
+                            "稳定",
+                            "没有特性!"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Sharp 1",
-                            "Gives increased damage, stacks with",
-                            "mods and other properties."
+                            "锋利 1",
+                            "获得力量效果 (可叠加)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Steadfast",
-                            "33% chance to ignore an explosion"
+                            "坚固",
+                            "有33%的几率免疫爆炸伤害"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Rusty",
-                            "Armour durability loss +10%. Player Exp gain +10%"
+                            "腐蚀",
+                            "-10% 输出伤害",
+                            "+10% 玩家经验获取"
                         ))
                 ));
         map.put(IDStrings.GOLD,
@@ -108,29 +111,35 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Golden Veil",
-                            "Makes the player invisible. If used on",
-                            "a weapon, -100% damage."
+                            "金色面纱",
+                            "获得隐身效果",
+                            "-100% 输出伤害,用于武器时",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "All that Glitters",
-                            "Makes you all shiny..."
+                            "闪闪发光",
+                            "获得发光效果",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Prosperous",
-                            "1% chance to drop a gold nugget when hit"
+                            "繁荣",
+                            "在受到伤害时",
+                            "有1%几率掉落1个金粒"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Barter",
-                            "Piglins like your armour"
+                            "来个交易",
+                            "猪灵会被你吸引",
+                            "(周围5格内的猪灵不会攻击你)"
                         ))
                 ));
         map.put(IDStrings.COPPER,
@@ -156,29 +165,35 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Brains, Not Brawn",
-                            "Tool exp gain is doubled. Damage",
-                            "dealt is halved."
+                            "这是个脑力活",
+                            "+100% 工具经验获取",
+                            "-50% 输出伤害",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Conductive",
-                            "All tool exp is converted to player exp."
+                            "经验传导",
+                            "所有工具经验转化为玩家经验",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Beginner",
-                            "Damage taken +25%. Armour Exp +20%"
+                            "新手",
+                            "+20% 防具经验获取",
+                            "+25% 承受伤害"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Tarnished",
-                            "Outgoing damage reduced by 25%. Armour Exp +20%"
+                            "暗淡",
+                            "-20% 输出伤害",
+                            "+20% 防具经验获取"
                         ))
                 ));
         map.put(IDStrings.LEAD,
@@ -204,28 +219,35 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Poisonous",
-                            "25% chance to afflict poison on hit."
+                            "剧毒",
+                            "命中时有25%的几率附加中毒效果",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Leech",
-                            "Bonus health, but drains your energy."
+                            "蚂蟥",
+                            "获得额外血量,但会消耗能量",
+                            "(获得饥饿,生命提升III效果)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Sickly",
-                            "Lead Armour is not a good idea"
+                            "生病了",
+                            "铅制防具并不是个好主意",
+                            "(获得中毒效果)"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Sickly",
-                            "Lead Armour is not a good idea"
+                            "生病了",
+                            "铅制防具并不是个好主意",
+                            "(获得中毒效果)"
                         ))
                 ));
         map.put(IDStrings.SILVER,
@@ -251,31 +273,37 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Enchanting",
-                            "Tool exp gain is halved. Tools add a",
-                            "random vanilla enchant when leveling. May or",
-                            "may not match the tool type."
+                            "附魔",
+                            "-50% 工具经验获取",
+                            "工具升级时获得随机附魔",
+                            "附魔可能并不适用于该工具",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Soft Touch",
-                            "You feel lighter."
+                            "轻触",
+                            "你感觉轻松多了",
+                            "(获得缓降III效果)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Conductivity",
-                            "Immune to lightning and even reflect it back!"
+                            "导电",
+                            "免疫闪电伤害",
+                            "被闪电击中时在周围召唤闪电"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Enchanting",
-                            "Gains a random enchantment every time this",
-                            "peice of armour levels up. May not be useful."
+                            "附魔",
+                            "防具升级时获得随机附魔",
+                            "附魔可能并不适用于该防具"
                         ))
                 ));
         map.put(IDStrings.ALUMINUM,
@@ -301,28 +329,34 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Recyclable",
-                            "Chance to restore durability on hit/block break"
+                            "再生资源",
+                            "使用时有25%的几率恢复耐久",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Soft",
-                            "Durability loss +100%, tool EXP +50%."
+                            "柔韧",
+                            "+100% 耐久消耗",
+                            "+50% 工具经验获取",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Foil",
-                            "Damage Taken +50%. Speed + 1"
+                            "快跑",
+                            "+50% 承受伤害",
+                            "获得速度效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Easily Shaped",
-                            "Repairs only need a single kit."
+                            "快速修复",
+                            "只需要1个修复工具即可完全修复"
                         ))
                 ));
         map.put(IDStrings.TIN,
@@ -348,28 +382,34 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Malleable",
-                            "Deal 50% less damage but gain luck."
+                            "幸运",
+                            "-50% 输出伤害",
+                            "获得幸运效果",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Can",
-                            "Your hunger just fades away"
+                            "罐头",
+                            "你不再饥饿",
+                            "(获得饱和效果)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Non-Corrosive",
-                            "Immune to poison"
+                            "抗毒",
+                            "免疫中毒效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Boost",
-                            "When taking heavy damage, gain absorption"
+                            "承伤",
+                            "当受到伤害时,获得伤害吸收效果"
                         ))
                 ));
         map.put(IDStrings.ZINC,
@@ -395,29 +435,35 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Graceful",
-                            "DOLPHIN POWERS, ACTIVATE!"
+                            "海豚的恩惠",
+                            "激活海豚的力量!",
+                            "(获得海豚的恩惠效果)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Super Lightweight",
-                            "Makes you lighter than air when not sneaking."
+                            "飘浮",
+                            "未蹲下时让你变得比空气还轻",
+                            "(获得飘浮II效果)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Sneaky",
-                            "Damage doubled if target is facing away.",
-                            "Small tolerance"
+                            "偷袭",
+                            "当目标看向别处时,",
+                            "+100% 对其造成的伤害"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Acupuncture",
-                            "Take no damage from cactus pricks"
+                            "针灸",
+                            "免疫来自仙人掌的伤害"
                         ))
                 ));
         map.put(IDStrings.MAGNESIUM,
@@ -443,30 +489,34 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Flammable",
-                            "Has a (Tool level x 5)% chance to",
-                            "set your enemies ablaze."
+                            "燃烧",
+                            "有(工具等级 x 5)%的几率",
+                            "让敌人着火",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Magnetesium",
-                            "Random items are drawn to you from",
-                            "within a 5 block range"
+                            "磁铁",
+                            "随机捡起附近5格范围内的物品",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Light",
-                            "Damage dealt -25%. Speed + 1"
+                            "快溜",
+                            "-25% 输出伤害",
+                            "获得速度效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "MagneSight™",
-                            "Gain Nightvision."
+                            "镁地™夜视",
+                            "获得夜视效果"
                         ))
                 ));
         map.put(IDStrings.COAL,
@@ -520,28 +570,34 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Stainless",
-                            "The tool/weapon repels blood."
+                            "不锈钢",
+                            "可以抵挡鲜血",
+                            "(仅视觉效果)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Lightweight",
-                            "Tool Exp +50%. Speed + 1"
+                            "轻量",
+                            "+50% 工具经验获取",
+                            "获得速度效果",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Hardy",
-                            "Explosions do 25% less damage"
+                            "坚硬",
+                            "-25% 受到的爆炸伤害"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Strong",
-                            "Health boost + 1"
+                            "强壮",
+                            "获得生命提升效果"
                         ))
                 ));
         map.put(IDStrings.DAMSTEEL,
@@ -571,30 +627,40 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Vampirism",
-                            "Chance to heal by damage given.",
-                            "Damage dealt varies by time of day."
+                            "吸血鬼",
+                            "造成伤害时有33%的几率恢复1点血量",
+                            "-50% 伤害(日间)",
+                            "+50% 伤害(夜间)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Nightstalker",
-                            "Gives night vision."
+                            "夜行者",
+                            "获得夜视效果",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Compounding",
-                            "Gain extra health equal for each compounding",
-                            "piece. Amount stacks on it's own gain"
+                            "复用",
+                            "获得生命提升效果",
+                            "其等级取决于含有复用特性的防具数量",
+                            "1件 \u21e8 1级",
+                            "2件 \u21e8 3级",
+                            "3件 \u21e8 6级",
+                            "4件 \u21e8 10级"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Snroht",
-                            "Thorns damage is ignored and relfected back"
+                            "荆棘",
+                            "免疫荆棘伤害",
+                            "反弹荆棘伤害"
                         ))
                 ));
         map.put(IDStrings.DURALIUM,
@@ -623,29 +689,37 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Durable",
-                            "Ignores being broken but damage 50%,",
-                            "mining will be slower and 0 exp."
+                            "耐用",
+                            "工具损坏时依然可用,但:",
+                            "-50% 输出伤害",
+                            "获得挖掘疲劳效果",
+                            "无法获得工具经验",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Easy Fix",
-                            "Only 1 kit is needed to fully repair."
+                            "完全修复",
+                            "只需要1格修复工具即可完全修复",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Durable",
-                            "Works when broken but damage taken +20%"
+                            "耐用",
+                            "防具损坏时依然可用,但:",
+                            "+20% 承受伤害"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Shock Absorbant",
-                            "10% chance to ignore damage. Not additive"
+                            "减震剂",
+                            "有10%的几率免疫伤害",
+                            "叠加不会提高几率"
                         ))
                 ));
         map.put(IDStrings.BRONZE,
@@ -674,29 +748,34 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Resistance",
-                            "Gives fire resistance while held."
+                            "防火",
+                            "获得防火效果",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Ingheights",
-                            "Something is wrong with this tool."
+                            "不对劲",
+                            "一定是这个工具有问题,一定是...",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Farmer",
-                            "All crop drops 1 extra item. Not effected by fortune.",
-                            "Does not stack with itself but does with other effects."
+                            "农民",
+                            "收获农作物时增加1个掉落物",
+                            "该效果不会受到时运的影响",
+                            "该效果不会叠加,但可被其他特性影响"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Brittle",
-                            "Durability loss doubled."
+                            "脆弱",
+                            "+100% 耐久消耗"
                         ))
                 ));
         map.put(IDStrings.ALUBRONZE,
@@ -725,29 +804,34 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Sharp 2",
-                            "Gives increased damage, stacks with",
-                            "mods and other properties."
+                            "锋利 2",
+                            "获得力量效果 (可叠加)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Brittle",
-                            "Durability loss is doubled."
+                            "脆弱",
+                            "+100% 耐久消耗",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Beautiful",
-                            "Chance to grow flowers as you walk."
+                            "鲜花",
+                            "在行走时有几率让周围的草地上开花"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Eject!",
-                            "If damaged when below 1/2 health - Eject!"
+                            "弹射!",
+                            "当血量低于一半时受到伤害",
+                            "弹射起飞!",
+                            "(获得飘浮III效果)"
                         ))
                 ));
         map.put(IDStrings.HARD,
@@ -778,29 +862,34 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Tuff Stuff",
-                            "Knocks back anything hit with a chance",
-                            "to stun."
+                            "击退",
+                            "击退任何命中的生物",
+                            "有几率禁锢目标",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Heavy",
-                            "Mines in a 3x3 area."
+                            "锤子",
+                            "可挖掘 3x3x3 区域",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Toughened",
-                            "Will not lose durability."
+                            "坚韧",
+                            "不消耗耐久"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Dwarven Skills",
-                            "Chance to find rare artifacts while mining."
+                            "地精",
+                            "在挖矿时有几率找到额外的物品",
+                            "装备更多有该特性的防具可以增加几率"
                         ))
                 ));
         map.put(IDStrings.CORBRONZE,
@@ -831,29 +920,33 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Flaming Hot",
-                            "Smelts broken blocks when possible."
+                            "炽热",
+                            "可熔炼掉落物",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Too Hot to Handle",
-                            "?"
+                            "太烫了...",
+                            "?",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Superhot",
-                            "Chance to set nearby entities on fire"
+                            "高温",
+                            "有几率使周围实体着火"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Warm Blodded",
-                            "Speed + 2 when hot in the nether.",
-                            "Slow + 1 when cold in the end"
+                            "温血",
+                            "在地狱获得速度II效果",
+                            "在末地获得缓慢效果"
                         ))
                 ));
         map.put(IDStrings.SOLDER,
@@ -882,29 +975,35 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Hidden",
-                            "Grants invisibility, breaks instantly."
+                            "隐身",
+                            "获得隐身效果",
+                            "但在使用时会立即损坏",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Fused",
-                            "Tool cannot be dropped either by the",
-                            "player or on death."
+                            "绑定",
+                            "工具无法被丢弃",
+                            "也不会在死亡时掉落",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Soft Landing",
-                            "Hitting walls no longer hurts"
+                            "软着陆",
+                            "免疫鞘翅的撞击伤害"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Fused",
-                            "Cannot be dropped on death or on purpose."
+                            "绑定",
+                            "防具无法被丢弃",
+                            "也不会在死亡时掉落"
                         ))
                 ));
         map.put(IDStrings.BILLON,
@@ -933,29 +1032,35 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Fast",
-                            "Move speed increased and haste applied.",
-                            "Stacks with modifiers."
+                            "速掘",
+                            "获得急迫效果",
+                            "(可叠加)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Springs",
-                            "Makes you jump higher."
+                            "弹簧",
+                            "让你跳的更高",
+                            "(获得跳跃提升IV效果)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "WHM",
-                            "Your attacks heal instead of harm."
+                            "天使降临",
+                            "你的攻击将治疗目标",
+                            "而不是伤害目标"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Heat Conductor",
-                            "Magma blocks no longer cause damage"
+                            "热导体",
+                            "免疫岩浆块的伤害"
                         ))
                 ));
         map.put(IDStrings.BRASS,
@@ -984,29 +1089,38 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Stiff",
-                            "Damage +50% but makes you unlucky"
+                            "倒霉鬼",
+                            "+50% 输出伤害",
+                            "获得厄运III效果",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Oxygenated",
-                            "Gives water breathing while held."
+                            "氧气",
+                            "获得水下呼吸效果",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Band",
-                            "Durability loss + 200%. Damage reduced between 1-25%",
-                            "getting lower as durability drops."
+                            "绑定环",
+                            "+200% 耐久消耗",
+                            "承受伤害将根据耐久度计算:",
+                            "耐久高于一半时减少承受伤害,满耐久度时最多为25%",
+                            "耐久低于一半时增加承受伤害,1耐久度时最多为25%"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Scarpaaarr!",
-                            "Durability loss doubled. When damaged below 1/2 health, gain Speed 3."
+                            "崩!撤!卖!溜!",
+                            "+100% 耐久消耗",
+                            "当血量低于一半时受到伤害",
+                            "获得速度III效果"
                         ))
                 ));
         map.put(IDStrings.ALUBRASS,
@@ -1035,30 +1149,35 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Abra",
-                            "Any hit mob has a % chance to be",
-                            "randomly teleported."
+                            "阿布拉",
+                            "命中生物时有33%的几率",
+                            "使目标随机传送",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Studious",
-                            "Tool and Player exp +50% but damage halved",
-                            "and you are slower to act."
+                            "好学",
+                            "+50% 工具经验获取",
+                            "+50% 玩家经验获取",
+                            "-50% 输出伤害",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Magus",
-                            "Magic Damage -50%"
+                            "巫师",
+                            "-50% 承受的魔法伤害"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Escape",
-                            "Randomly teleport then hit (10s CD)"
+                            "逃脱",
+                            "受到伤害时随机传送到附近(10秒冷却时间)"
                         ))
                 ));
         map.put(IDStrings.NICKEL,
@@ -1087,32 +1206,44 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Charged Head -",
-                            "Doesn't do anything... on it's own..."
+                            "带电(负极-)",
+                            "有20%的几率",
+                            "+200% 输出伤害",
+                            "并禁锢目标",
+                            "(需要与正极同时存在才能生效)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Charged Rod -",
-                            "Doesn't do anything... on it's own..."
+                            "带电(负极-)",
+                            "有20%的几率",
+                            "+200% 输出伤害",
+                            "并禁锢目标",
+                            "(需要与正极同时存在才能生效)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Magnetic -",
-                            "Gain 1 Stack of Magnetism and 1 Stack of Negativity.",
-                            "Magnetism draws in all nearby items.",
-                            "Range = Magnetism Level - (∆ Positivity/Negativity)"
+                            "磁铁(负极-)",
+                            "磁铁的负极",
+                            "磁铁可以自动吸收周围的掉落物",
+                            "范围 = (磁铁正极数 + 磁铁负极数) - (磁铁正级数与负极数的差异)",
+                            "(即磁铁正负极数越多,且正负极数尽量一致,即可增大范围)"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Magnetic -",
-                            "Gain 1 Stack of Magnetism and 1 Stack of Negativity.",
-                            "Magnetism draws in all nearby items.",
-                            "Range = Magnetism Level - (∆ Positivity/Negativity)"
+                            "磁铁(负极-)",
+                            "磁铁的负极",
+                            "磁铁可以自动吸收周围的掉落物",
+                            "范围 = (磁铁正极数 + 磁铁负极数) - (磁铁正级数与负极数的差异)",
+                            "(即磁铁正负极数越多,且正负极数尽量一致,即可增大范围)"
                         ))
                 ));
         map.put(IDStrings.COBALT,
@@ -1142,32 +1273,44 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Charged Head +",
-                            "Doesn't do anything... on it's own..."
+                            "带电(正极+)",
+                            "有20%的几率",
+                            "+200% 输出伤害",
+                            "并禁锢目标",
+                            "(需要与负极同时存在才能生效)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Charged Rod +",
-                            "Doesn't do anything... on it's own..."
+                            "带电(正极+)",
+                            "有20%的几率",
+                            "+200% 输出伤害",
+                            "并禁锢目标",
+                            "(需要与负极同时存在才能生效)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Magnetic +",
-                            "Gain 1 Stack of Magnetism and 1 Stack of Negativity.",
-                            "Magnetism draws in all nearby items.",
-                            "Range = Magnetism Level - (∆ Positivity/Negativity)"
+                            "磁铁(正极+)",
+                            "磁铁的正极",
+                            "磁铁可以自动吸收周围的掉落物",
+                            "范围 = (磁铁正极数 + 磁铁负极数) - (磁铁正级数与负极数的差异)",
+                            "(即磁铁正负极数越多,且正负极数尽量一致,即可增大范围)"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Magnetic +",
-                            "Gain 1 Stack of Magnetism and 1 Stack of Positivity.",
-                            "Magnetism draws in all nearby items.",
-                            "Range = Magnetism Level - (∆ Positivity/Negativity)"
+                            "磁铁(正极+)",
+                            "磁铁的正极",
+                            "磁铁可以自动吸收周围的掉落物",
+                            "范围 = (磁铁正极数 + 磁铁负极数) - (磁铁正级数与负极数的差异)",
+                            "(即磁铁正负极数越多,且正负极数尽量一致,即可增大范围)"
                         ))
                 ));
         map.put(IDStrings.REINFORCED,
@@ -1200,28 +1343,34 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Bulky",
-                            "Mines in a 3x3 area"
+                            "锤子",
+                            "可挖掘 3x3x3 区域",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Reinforced",
-                            "Any Plate mod on the tool is counted twice."
+                            "双倍强化",
+                            "强化合金板模组拥有双倍效果",
+                            "(只需5个即可不消耗耐久)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Reinforcable",
-                            "Plate mods count twice."
+                            "双倍强化",
+                            "强化合金板模组拥有双倍效果",
+                            "(只需5个即可不消耗耐久)"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Witherproof",
-                            "Immune to the wither effect."
+                            "防凋零",
+                            "免疫凋零效果"
                         ))
                 ));
         map.put(IDStrings.STRING,
@@ -1248,16 +1397,18 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_BINDING,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Works",
-                            "No special effects."
+                            "又不是不能用",
+                            "没有特殊效果",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         null,
                         new CMTrait(
                             CMTraits.PROP_GAMBESON,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Works",
-                            "No special effects but makes armour quickly."
+                            "又不是不能用",
+                            "没有特殊效果"
                         ),
                         null)
                 ));
@@ -1285,17 +1436,18 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_BINDING,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Growth",
-                            "Slowly repairs the tool during the day.",
-                            "Stacks with mods. Must be in hand"
+                            "生长",
+                            "在白天缓慢修复工具",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         null,
                         new CMTrait(
                             CMTraits.PROP_GAMBESON,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Growth",
-                            "Slowly repairs during the day."
+                            "生长",
+                            "在白天缓慢修复防具"
                         ),
                         null)
                 ));
@@ -1323,17 +1475,18 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_BINDING,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Decay",
-                            "Slowly repairs the tool at night.",
-                            "Stacks with mods. Must be in hand"
+                            "腐烂",
+                            "在夜间缓慢修复工具",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         null,
                         new CMTrait(
                             CMTraits.PROP_GAMBESON,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Decay",
-                            "Slowly repairs during night."
+                            "腐烂",
+                            "在夜间缓慢修复防具"
                         ),
                         null)
                 ));
@@ -1361,16 +1514,18 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_BINDING,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Refreshing",
-                            "Slowly heals the holder."
+                            "恢复",
+                            "缓慢治疗玩家",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         null,
                         new CMTrait(
                             CMTraits.PROP_GAMBESON,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Refreshing",
-                            "Slowly heals the equipping player."
+                            "恢复",
+                            "缓慢治疗玩家"
                         ),
                         null)
                 ));
@@ -1398,16 +1553,20 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_BINDING,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Dooom",
-                            "I get a bad feeling from this..."
+                            "不祥之兆",
+                            "我感觉很不好...",
+                            "(获得不祥之兆效果)",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         null,
                         new CMTrait(
                             CMTraits.PROP_GAMBESON,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Doom",
-                            "Gives you bad omen. Hide your villagers!"
+                            "不祥之兆",
+                            "我感觉很不好...",
+                            "(获得不祥之兆效果)"
                         ),
                         null)
                 ));
@@ -1435,17 +1594,18 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_BINDING,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Attraction",
-                            "All drops are drawn to you within a",
-                            "5 block range."
+                            "吸引",
+                            "自动吸收周围5格内的掉落物",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         null,
                         new CMTrait(
                             CMTraits.PROP_GAMBESON,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Attraction",
-                            "Nearby drops (5x5 area) are drawn to you."
+                            "吸引",
+                            "自动吸收周围5格内的掉落物"
                         ),
                         null)
                 ));
@@ -1473,16 +1633,18 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_BINDING,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Bouncy",
-                            "Fall damage is halved."
+                            "弹性",
+                            "-50% 摔落伤害",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         null,
                         new CMTrait(
                             CMTraits.PROP_GAMBESON,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Bouncy",
-                            "Fall damage -25%"
+                            "弹性",
+                            "-25% 摔落伤害"
                         ),
                         null)
                 ));
@@ -1538,17 +1700,19 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_BINDING,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Slow Learner",
-                            "Tool exp gain when breaking blocks is",
-                            "increased by (Tool Level x 5%)"
+                            "缓慢学习",
+                            "破坏方块时",
+                            "+(5 * 工具等级)% 工具经验获取",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         null,
                         new CMTrait(
                             CMTraits.PROP_GAMBESON,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Slow Learner",
-                            "Armour exp gain = (Level * 5%)"
+                            "缓慢学习",
+                            "+(5 * 防具等级)% 防具经验获取"
                         ),
                         null)
                 ));
@@ -1577,16 +1741,18 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_BINDING,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Thick",
-                            "Tool exp gain + 50%"
+                            "厚皮革",
+                            "+50% 工具经验获取",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         null,
                         new CMTrait(
                             CMTraits.PROP_GAMBESON,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Thick",
-                            "Armour exp gain + 10%"
+                            "厚皮革",
+                            "+10% 防具经验获取"
                         ),
                         null)
                 ));
@@ -1617,24 +1783,29 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Hydrogen",
-                            "Float away from danger."
+                            "氢气",
+                            "受到伤害时",
+                            "获得飘浮效果",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         null,
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Solar Powered",
-                            "Restores durability during the day time."
+                            "太阳能",
+                            "在白天持续恢复耐久"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Brightburn",
-                            "Gives on stack of Burning Bright! With 4 ",
-                            "stacks, hostile mobs are repelled (not bosses)."
+                            "魔童",
+                            "获得1层魔童效果",
+                            "当拥有4层及以上的魔童效果时",
+                            "击退周围5格内的所有的生物",
+                            "(凋零与末影龙除外)"
                         ))
                 ));
         map.put(IDStrings.REDSTONE_ALLOY,
@@ -1666,21 +1837,24 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_ROD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Lightning Rod",
-                            "A chance to strike hit mobs with lightning."
+                            "电棍",
+                            "有几率在命中生物时召唤闪电",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         new CMTrait(
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Powered On",
-                            "Randomly powers a block within a 5x2x5 range."
+                            "充能",
+                            "在 5x2x5 范围内随机充能方块",
+                            "(激活红石信号)"
                         ),
                         null,
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Who needs pressure plates?",
-                            "The block you stand on is powered."
+                            "谁还要压力板?",
+                            "你所站的方块是充能的"
                         ))
                 ));
         map.put(IDStrings.DIAMOND,
@@ -1738,8 +1912,10 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Ladder Simulator™",
-                            "Spawns ladders on right click."
+                            "梯子模拟器™",
+                            "右键点击时生成梯子",
+                            "",
+                            ThemeUtils.ITEM_MOLTEN_METAL + "必须手持工具或武器才有效果"
                         ),
                         null,
                         null,
@@ -1747,7 +1923,7 @@ public final class CMCore {
                             CMTraits.PROP_PLATES,
                             SupportedPluginsManager.CORE_NOTE,
                             "Go Boomer",
-                            "Warning... things will go boom..."
+                            "警告: 即将发生爆炸"
                         ),
                         null,
                         null)
@@ -1775,8 +1951,8 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_HEAD,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Celebrate",
-                            "Time to celebrate"
+                            "庆祝",
+                            "是时候庆祝一下了"
                         ),
                         null,
                         null,
@@ -1843,8 +2019,8 @@ public final class CMCore {
                         new CMTrait(
                             CMTraits.PROP_LINKS,
                             SupportedPluginsManager.CORE_NOTE,
-                            "Feeling Festive",
-                            "Get that festive feeling!"
+                            "庆祝节日",
+                            "一起来庆祝圣诞节吧!"
                         ))
                 ));
 

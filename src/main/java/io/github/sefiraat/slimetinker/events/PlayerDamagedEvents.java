@@ -120,10 +120,10 @@ public final class PlayerDamagedEvents {
                 p.getWorld().spawnParticle(Particle.REDSTONE, p.getLocation(), 30, 3, 3, 3, 1, dustOptions2);
                 Particle.DustOptions dustOptions3 = new Particle.DustOptions(Color.fromRGB(40, 40, 40), 2);
                 p.getWorld().spawnParticle(Particle.REDSTONE, p.getLocation(), 30, 3, 3, 3, 1, dustOptions3);
-                p.sendMessage(ThemeUtils.WARNING + "Protective has saved you from death. It's now on cooldown - take care!");
+                p.sendMessage(ThemeUtils.WARNING + "保护技能已使你免于死亡。现在保护技能进入冷却了,小心!");
                 ItemUtils.setCooldown(i, "PROTECTIVE", 1200000);
             } else {
-                p.sendMessage(ThemeUtils.WARNING + "Skill is on cooldown");
+                p.sendMessage(ThemeUtils.WARNING + "保护技能冷却中");
             }
 
         }

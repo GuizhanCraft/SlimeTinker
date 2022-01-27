@@ -317,7 +317,7 @@ public final class EntityDamageEvents {
             friend.getDamagedEntity().teleport(friend.getDamagedEntity().getLocation().clone().setDirection(friend.getPlayer().getLocation().getDirection()));
             ItemUtils.setCooldown(i, "WARP", 20000);
         } else {
-            friend.getPlayer().sendMessage(ThemeUtils.WARNING + "This skill is on cooldown");
+            friend.getPlayer().sendMessage(ThemeUtils.WARNING + "别看我技能冷却中");
         }
 
     }

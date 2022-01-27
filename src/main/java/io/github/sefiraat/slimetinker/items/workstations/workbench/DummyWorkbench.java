@@ -13,8 +13,8 @@ public final class DummyWorkbench {
         "DUMMY_TINKERS_SMELTERY",
         Material.FLETCHING_TABLE,
         ThemeItemType.MACHINE,
-        "ToolTable",
-        "This item is crafted in the workbench."
+        "匠魂合成站",
+        "该物品在匠魂合成站中制作"
     );
     public static final RecipeType TYPE = new RecipeType(SlimeTinker.inst().getKeys().getWsDummyWorkbench(), STACK);
 

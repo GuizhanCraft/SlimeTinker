@@ -22,48 +22,50 @@ public class CMTraits {
             "PROP_HEAD",
             SkullTextures.PART_SWORD_BLADE,
             ThemeItemType.PART,
-            "Part: Head",
-            ThemeUtils.PASSIVE + "Any 'Head' item (Sword Blade, Axe Head etc.)"
+            "部件: 头部",
+            ThemeUtils.PASSIVE + "任何头部部件",
+            ThemeUtils.PASSIVE + "(例如: 镐头,铲头,斧刃等)"
         );
     public static final SlimefunItemStack PROP_BINDING =
         ThemeUtils.themedItemStack(
             "PROP_BINDING",
             SkullTextures.PART_BINDING,
             ThemeItemType.PART,
-            "Part: Binder",
-            ThemeUtils.PASSIVE + "Any 'Binder' item."
+            "部件: 绑定结",
+            ThemeUtils.PASSIVE + "任何绑定结部件"
         );
     public static final SlimefunItemStack PROP_ROD =
         ThemeUtils.themedItemStack(
             "PROP_ROD",
             SkullTextures.PART_TOOL_ROD,
             ThemeItemType.PART,
-            "Part: Tool Rod",
-            ThemeUtils.PASSIVE + "Any 'Tool Rod' item."
+            "部件: 手柄",
+            ThemeUtils.PASSIVE + "任何手柄部件"
         );
     public static final SlimefunItemStack PROP_PLATES =
         ThemeUtils.themedItemStack(
             "PROP_PLATES",
             SkullTextures.PART_CHEST_PLATES,
             ThemeItemType.PART,
-            "Part: Plates",
-            ThemeUtils.PASSIVE + "Any 'Plate' item (Helm Plates, Boot Plates etc.)"
+            "部件: 盔甲板",
+            ThemeUtils.PASSIVE + "任何盔甲板部件",
+            ThemeUtils.PASSIVE + "(例如: 头盔板,胸甲板等)"
         );
     public static final SlimefunItemStack PROP_GAMBESON =
         ThemeUtils.themedItemStack(
             "PROP_GAMBESON",
             SkullTextures.PART_GAMBESON,
             ThemeItemType.PART,
-            "Part: Gambeson",
-            ThemeUtils.PASSIVE + "Any 'Gambeson' item."
+            "部件: 护身软甲",
+            ThemeUtils.PASSIVE + "任何护身软甲部件"
         );
     public static final SlimefunItemStack PROP_LINKS =
         ThemeUtils.themedItemStack(
             "PROP_LINKS",
             SkullTextures.PART_LINKS,
             ThemeItemType.PART,
-            "Part: Mail Links",
-            ThemeUtils.PASSIVE + "Any 'Mail Link' item."
+            "部件: 盔甲接合物",
+            ThemeUtils.PASSIVE + "任何盔甲接合物部件"
         );
     private final String materialID;
     @Nullable

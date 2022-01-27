@@ -24,14 +24,14 @@ public class Commands extends BaseCommand {
     @Default
     public void onDefault(CommandSender sender) {
         if (sender instanceof Player) {
-            sender.sendMessage(ThemeUtils.ERROR + "Please provide a valid subcommand.");
+            sender.sendMessage(ThemeUtils.ERROR + "必须有子指令");
         }
     }
 
     @Subcommand("AddExp")
     @CommandPermission("SlimeTinker.Admin")
     @CommandCompletion("<amount>")
-    @Description("Adds EXP to the held item")
+    @Description("向手持物品增加经验")
     public void tool(CommandSender sender, int amount) {
         if (sender instanceof Player) {
             Player p = (Player) sender;
@@ -40,31 +40,31 @@ public class Commands extends BaseCommand {
                 Experience.addExp(i, amount, p, false);
             }
         } else {
-            sender.sendMessage(ThemeUtils.ERROR + "This can only be done as a player.");
+            sender.sendMessage(ThemeUtils.ERROR + "只有玩家才能执行该指令");
         }
     }
 
     @Subcommand("GenerateItem")
     @CommandPermission("SlimeTinker.Admin")
-    @Description("Creates a new SlimeTinker item")
+    @Description("生成匠魂物品")
     public class GenerateItem extends BaseCommand {
 
         @Subcommand("Armour")
         @CommandCompletion("@ITEM_CLASS_ARMOUR @PART_MATERIALS_PLATE @PART_MATERIALS_GAMBESON @PART_MATERIALS_LINKS")
-        @Description("Creates a new SlimeTinker armour piece with the given materials")
+        @Description("使用指定的材料生成匠魂防具")
         public void armour(CommandSender sender, String type, String plateMat, String gambesonMat, String linksMat) {
             if (sender instanceof Player) {
                 Player p = (Player) sender;
                 ArmourDefinition armour = new ArmourDefinition(IDStrings.PLATE, type, plateMat, gambesonMat, linksMat);
                 p.getInventory().addItem(Guide.HELM.getStack(armour));
             } else {
-                sender.sendMessage(ThemeUtils.ERROR + "This can only be done as a player.");
+                sender.sendMessage(ThemeUtils.ERROR + "只有玩家才能执行该指令");
             }
         }
 
         @Subcommand("Tool")
         @CommandCompletion("@ITEM_CLASS_TOOL @PART_MATERIALS_HEAD @PART_MATERIALS_BINDER @PART_MATERIALS_ROD")
-        @Description("Creates a new SlimeTinker tool with the given materials")
+        @Description("使用指定的材料生成匠魂工具")
         public void tool(CommandSender sender, String type, String headMat, String binderMat, String rodMat) {
             if (sender instanceof Player) {
                 Player p = (Player) sender;
@@ -75,7 +75,7 @@ public class Commands extends BaseCommand {
                     p.getInventory().addItem(Guide.SHOVEL.getStack(tool));
                 }
             } else {
-                sender.sendMessage(ThemeUtils.ERROR + "This can only be done as a player.");
+                sender.sendMessage(ThemeUtils.ERROR + "只有玩家才能执行该指令");
             }
         }
 
