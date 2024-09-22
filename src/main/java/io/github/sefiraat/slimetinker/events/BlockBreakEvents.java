@@ -105,7 +105,7 @@ public final class BlockBreakEvents {
     }
 
     public static void headCopper(EventFriend friend) {
-        friend.setToolExpMod(friend.getToolExpMod() + 1);
+        friend.setToolExpMod(friend.getToolExpMod() + 0.5);
     }
 
     public static void rodAluBrass(EventFriend friend) {
@@ -223,11 +223,7 @@ public final class BlockBreakEvents {
         if (m.containsKey(b.getType()) && m.get(b.getType()).equals(toolType) && GeneralUtils.testChance(1, 10)) {
             ItemStack i;
             int rnd2 = GeneralUtils.roll(1000);
-            if (rnd2 > 975) {
-                i = new ItemStack(Material.ANCIENT_DEBRIS);
-            } else if (rnd2 > 900) {
-                i = new ItemStack(Material.DIAMOND);
-            } else if (rnd2 > 800) {
+            if (rnd2 > 800) {
                 i = new ItemStack(Material.LAPIS_LAZULI);
             } else if (rnd2 > 700) {
                 i = new ItemStack(Material.REDSTONE);

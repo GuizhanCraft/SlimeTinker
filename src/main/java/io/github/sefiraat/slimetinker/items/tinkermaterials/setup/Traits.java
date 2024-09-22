@@ -51,7 +51,7 @@ public final class Traits {
         .setAddedBy(SupportedPluginsManager.CORE_NOTE)
         .setTraitName("腐蚀")
         .setLore(
-            "-10% 输出伤害",
+            "-20% 输出伤害",
             "+10% 玩家经验获取"
         )
         .addConsumer(TraitEventType.ENTITY_DAMAGED, EntityDamageEvents::linksIron);
@@ -103,7 +103,7 @@ public final class Traits {
         .setAddedBy(SupportedPluginsManager.CORE_NOTE)
         .setTraitName("这是个脑力活")
         .setLore(
-            "+100% 工具经验获取",
+            "+50% 工具经验获取",
             "-50% 输出伤害"
         )
         .addConsumer(TraitEventType.ENTITY_DAMAGED, EntityDamageEvents::headCopper)
@@ -232,7 +232,7 @@ public final class Traits {
         .setAddedBy(SupportedPluginsManager.CORE_NOTE)
         .setTraitName("柔韧")
         .setLore(
-            "+100% 耐久消耗",
+            "+200% 耐久消耗",
             "+50% 工具经验获取"
         )
         .addConsumer(TraitEventType.DURABILITY, DurabilityEvents::rodAluminum)
@@ -275,8 +275,8 @@ public final class Traits {
         .setAddedBy(SupportedPluginsManager.CORE_NOTE)
         .setTraitName("罐头")
         .setLore(
-            "你不再饥饿",
-            "(获得饱和效果)"
+            "你不再饥饿,但你变得更加虚弱",
+            "(获得饱和和虚弱效果)"
         )
         .addConsumer(TraitEventType.TICK, TickEvents::rodTin);
 
@@ -372,7 +372,7 @@ public final class Traits {
         .setAddedBy(SupportedPluginsManager.CORE_NOTE)
         .setTraitName("镁地™夜视")
         .setLore(
-            "获得夜视效果"
+            "获得夜视和虚弱效果"
         )
         .addConsumer(TraitEventType.TICK, TickEvents::linksMagnesium);
 
@@ -609,7 +609,7 @@ public final class Traits {
         .setAddedBy(SupportedPluginsManager.CORE_NOTE)
         .setTraitName("地精")
         .setLore(
-            "在挖矿时有几率找到额外的物品",
+            "在挖矿时有几率找到不稀有的物品",
             "该几率可以叠加"
         )
         .addConsumer(TraitEventType.BLOCK_BREAK, BlockBreakEvents::linksHardened);
@@ -737,7 +737,7 @@ public final class Traits {
         .setAddedBy(SupportedPluginsManager.CORE_NOTE)
         .setTraitName("倒霉鬼")
         .setLore(
-            "+50% 输出伤害",
+            "+20% 输出伤害",
             "获得厄运III效果"
         )
         .addConsumer(TraitEventType.ENTITY_DAMAGED, EntityDamageEvents::headBrass)
@@ -1392,7 +1392,7 @@ public final class Traits {
         .setAddedBy(SupportedPluginsManager.INFINITY_EXPANSION_NOTE)
         .setTraitName("地精")
         .setLore(
-            "在挖矿时有几率找到额外的物品",
+            "在挖矿时有几率找到不稀有的物品",
             "该几率可以叠加"
         )
         .addConsumer(TraitEventType.BLOCK_BREAK, BlockBreakEvents::linksHardened);
@@ -2232,7 +2232,7 @@ public final class Traits {
         .setAddedBy(SupportedPluginsManager.LITEXPANSION_NOTE)
         .setTraitName("倒霉鬼")
         .setLore(
-            "+50% 输出伤害",
+            "+20% 输出伤害",
             "获得厄运III效果"
         )
         .addConsumer(TraitEventType.ENTITY_DAMAGED, EntityDamageEvents::headBrass)

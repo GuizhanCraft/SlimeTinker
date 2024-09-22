@@ -43,7 +43,7 @@ public final class DurabilityEvents {
     }
 
     public static void rodAluminum(EventFriend friend) {
-        friend.setDurabilityMod(friend.getDurabilityMod() + 1);
+        friend.setDurabilityMod(friend.getDurabilityMod() + 2);
     }
 
     public static void explosive(EventFriend friend) {

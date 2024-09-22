@@ -107,6 +107,7 @@ public final class TickEvents {
 
     public static void rodTin(EventFriend friend) {
         increaseEffect(PotionEffectType.SATURATION, friend.getPotionEffects());
+        increaseEffect(PotionEffectType.WEAKNESS, friend.getPotionEffects());
     }
 
     public static void binderCrimsonRoot(EventFriend friend) {
@@ -485,6 +486,7 @@ public final class TickEvents {
 
     public static void linksMagnesium(EventFriend friend) {
         increaseEffect(PotionEffectType.NIGHT_VISION, friend.getPotionEffects());
+        increaseEffect(PotionEffectType.WEAKNESS, friend.getPotionEffects());
     }
 
     public static void plateCobalt(EventFriend friend) {

@@ -114,7 +114,7 @@ public final class EntityDamageEvents {
     }
 
     public static void linksIron(EventFriend friend) {
-        friend.setDamageMod(friend.getDamageMod() - 0.1);
+        friend.setDamageMod(friend.getDamageMod() - 0.2);
         friend.setPlayerExpMod(friend.getPlayerExpMod() + 0.1);
     }
 
@@ -125,7 +125,7 @@ public final class EntityDamageEvents {
     }
 
     public static void headBrass(EventFriend friend) {
-        friend.setDamageMod(friend.getDamageMod() + 0.5);
+        friend.setDamageMod(friend.getDamageMod() + 0.2);
     }
 
     public static void rodAlubrass(EventFriend friend) {
