@@ -1293,7 +1293,7 @@ public final class Traits {
         .setAddedBy(SupportedPluginsManager.INFINITY_EXPANSION_NOTE)
         .setTraitName("虚空矿工")
         .setLore(
-            "在挖掘时有几率掉落随机的矿产"
+            "在挖掘时有几率掉落随机的不稀有矿产"
         )
         .addConsumer(TraitEventType.BLOCK_BREAK, BlockBreakEvents::headVoid);
 
